@@ -21,6 +21,10 @@ Concrete:		#95a5a6;	Grays
 Asbestos:		#7f8c8d;
 */
 
+body > .container {
+	padding-bottom: 80px;
+}
+
 .navbar-brand {
 	padding-bottom: 3px;
 	padding-top: 3px;
@@ -33,4 +37,40 @@ Asbestos:		#7f8c8d;
 
 .text-red {
 	color: #c0392b;
+}
+
+#card {
+	background: red;
+	border: solid 1px black;
+}
+
+#card div[class^="col-"] {
+	padding: 0;
+	width: 20%;
+}
+
+.slot {
+	position: relative;
+	border: solid 1px black;
+}
+
+.slot p {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: red;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0.1em 0.2em;
+	color: white;
+	border-top: solid 2px black;
+	text-align: center;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	background-color: #F5F5F5;
 }
