@@ -5,9 +5,10 @@
 
 	<!-- TODO: Implement centered columns -->
 	<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-		<div id="card" class="xbox clearfix">
-			<header>
-				<p>Xbox One</p>
+		<div id="card" class="playstation clearfix">
+			<header class="text-center">
+				<img id="card-header-logo" src="images/logo_playstation.png">
+				<h1 class="sr-only">PlayStation</h1>
 			</header>
 			<div class="clearfix" ng-repeat="i in vm.getNumber(5) track by $index">
 				<div class="col-xs-2 slot" ng-repeat="i in vm.getNumber(5) track by $index">

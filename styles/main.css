@@ -55,6 +55,10 @@ body > .container {
 	border: solid 1px black;
 }
 
+#card-header-logo {
+	height: 30px;
+}
+
 .card-row {
 	border: solid 1px yellow;
 }
@@ -87,11 +91,11 @@ body > .container {
 	background: #107C10;
 }
 
-.nin {
+.nintendo {
 	background: #D01A19;
 }
 
-.psx {
+.playstation {
 	background: #0661B2;
 }
 
