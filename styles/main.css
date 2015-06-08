@@ -40,7 +40,6 @@ body > .container {
 }
 
 #card {
-	background: red;
 	border: solid 1px black;
 }
 
@@ -49,23 +48,32 @@ body > .container {
 	width: 20%;
 }
 
+#card header {
+	color: white;
+	margin: 0;
+	padding: 0.5em;
+	border: solid 1px black;
+}
+
+.card-row {
+	border: solid 1px yellow;
+}
+
 .slot {
 	position: relative;
 	border: solid 1px black;
 }
 
 .slot p {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	background: red;
-	display: block;
-	width: 100%;
+	background: transparent;
 	margin: 0;
-	padding: 0.1em 0.2em;
+	padding: 0.1em 0.3em;
 	color: white;
 	border-top: solid 2px black;
 	text-align: center;
+	font-size: 12px;
+	line-height: 1em;
+	min-height: 28px;
 }
 
 .footer {
@@ -73,4 +81,24 @@ body > .container {
 	bottom: 0px;
 	width: 100%;
 	background-color: #F5F5F5;
+}
+
+.xbox {
+	background: #107C10;
+}
+
+.nin {
+	background: #D01A19;
+}
+
+.psx {
+	background: #0661B2;
+}
+
+@media screen and (max-width: 480px) {
+	.slot p {
+		font-size: 10px;
+		line-height: 1.2em;
+		min-height: 25px;
+	}
 }
