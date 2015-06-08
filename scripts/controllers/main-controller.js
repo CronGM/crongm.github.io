@@ -28,7 +28,7 @@ app.controller('MainController', ['$scope', '$routeParams', function ($scope, $r
 	}
 
 	vm.getNumber = function(num) {
-        return new Array(num);   
+        return new Array(num);
     }
 
     vm.generateCardCode = function () {
@@ -43,10 +43,9 @@ app.controller('MainController', ['$scope', '$routeParams', function ($scope, $r
     	vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
     }
 
-    vm.readCardCode = function (cardCode) {
-    	vm.cardCode = $routeParams.cardCode;
+    vm.readCardCode = function () {
     	// Check that code has exactly 24 characters
-    	// If valid length, check that code is valid having no duplicate or strange characters 
+    	// If valid length, check that code is valid having no duplicate or strange characters
     	// If valid code insert middle slot in card
     	vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
     	// Print card with the supplied cardCode
