@@ -23,8 +23,11 @@ app.controller('MainController', ['$scope', '$routeParams', function ($scope, $r
 		};
 		if (vm.cardCode == '') {
 			vm.generateCardCode();
+		}
+		else {
+			vm.readCardCode();
 		};
-		vm.readCardCode();
+		vm.cardLogoUrl = 'images/logo_' + vm.conference + '.png';
 	}
 
 	vm.getNumber = function(num) {

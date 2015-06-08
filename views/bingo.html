@@ -8,9 +8,9 @@
 	<!-- TODO: Implement centered columns -->
 	<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 		<button class="btn btn-default" ng-click="vm.generateCardCode()">GENERATE CARD</button>
-		<div id="card" class="playstation clearfix">
+		<div id="card" class="{{ vm.conference }} clearfix">
 			<header class="text-center">
-				<img id="card-header-logo" src="images/logo_playstation.png">
+				<img id="card-header-logo" ng-src="{{ vm.cardLogoUrl }}">
 				<h1 class="sr-only">PlayStation</h1>
 			</header>
 			<div class="clearfix" ng-repeat="i in vm.getNumber(5) track by $index">
