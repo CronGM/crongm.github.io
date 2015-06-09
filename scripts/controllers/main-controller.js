@@ -3,10 +3,14 @@
 app.controller('MainController', ['$scope', '$routeParams', function ($scope, $routeParams) {
 	var vm = this;
 
+	// Enable debug UI
+	vm.debug = true;
+
 	vm.validConferences = ['nintendo', 'playstation', 'xbox'];
 
 	vm.conference = $routeParams.conference || '';
 	vm.cardCode = $routeParams.cardCode || '';
+	vm.isCodeValid = false;
 
 	vm.card = [
 		{
@@ -20,19 +24,24 @@ app.controller('MainController', ['$scope', '$routeParams', function ($scope, $r
 		// Handle missing route parameters
 		if (vm.conference == '') {
 			vm.conference = vm.validConferences[Math.floor(Math.random() * 3)];
-		};
+		}
 		if (vm.cardCode == '') {
 			vm.generateCardCode();
 		}
 		else {
 			vm.readCardCode();
 		};
+
 		vm.cardLogoUrl = 'images/logo_' + vm.conference + '.png';
-	}
+
+		vm.drawCard();
+
+		return;
+	};
 
 	vm.getNumber = function(num) {
         return new Array(num);
-    }
+    };
 
     vm.generateCardCode = function () {
     	vm.cardCode = "";
@@ -43,21 +52,56 @@ app.controller('MainController', ['$scope', '$routeParams', function ($scope, $r
     		vm.cardCode += chars[indexOut];
     		chars = strSplice(chars, indexOut, 1);
     	};
+
     	vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
-    }
+
+    	return;
+    };
 
     vm.readCardCode = function () {
-    	// Check that code has exactly 24 characters
-    	// If valid length, check that code is valid having no duplicate or strange characters
+    	var codePattern = /^(?:([A-Za-z])(?!.*\1))*$/;
+
+    	// Check that conference parameter is valid
+    	if (vm.validConferences.indexOf(vm.conference) == -1) {
+    		// TODO: Show conference error message
+    		console.log("conference error");
+			vm.conference = vm.validConferences[Math.floor(Math.random() * 3)];
+    		return;
+    	}
+    	
+    	// If valid conference, check that code has exactly 24 characters
+    	// If not, generate valid code
+    	if (vm.cardCode.length != 24) {
+    		// TODO: Show cardCode error message
+    		console.log("length error");
+			vm.generateCardCode();
+			return;
+    	}
+    	
+		// If valid length, check that code is valid having no duplicate or strange characters
+    	// If not, generate valid code
+    	if (!codePattern.test(vm.cardCode)) {
+    		console.log("pattern error");
+    		vm.generateCardCode();
+    		return;
+    	};
+    	
     	// If valid code insert middle slot in card
     	vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
-    	// Print card with the supplied cardCode
-    }
+
+    	vm.isCodeValid = true;
+
+    	return;
+    };
+
+    vm.drawCard = function () {
+    	// body...
+    };
 
     // Emulates Splice on strings.
 	function strSplice(str, index, count, add) {
 		return str.slice(0, index) + (add || "") + str.slice(index + count);
-	}
+	};
 
 	vm.init();
 }]);
