@@ -7,6 +7,9 @@
 		<p>Conference: {{ vm.conference }}</p>
 		<p>Card Code: {{ vm.cardCode }}</p>
 		<p>Is Code Valid? {{ vm.isCodeValid }}</p>
+		<p>Card:</p>
+		<textarea>{{ vm.card | json }}</textarea>
+		<p>Card Item 0: {{ vm.card[0].id }} {{ vm.card[0].imageUrl }} {{ vm.card[0].message }}</p>
 		<button class="btn btn-default" ng-click="vm.generateCardCode()">GENERATE CARD</button>
 	</div>
 
@@ -19,8 +22,8 @@
 			</header>
 			<div class="clearfix" ng-repeat="i in vm.getNumber(5) track by $index">
 				<div class="col-xs-2 slot" ng-repeat="i in vm.getNumber(5) track by $index">
-					<img ng-src="{{ vm.card[0].imageUrl }}" class="img-responsive">
-					<p>{{ vm.card[0].message }}</p>
+					<img ng-src="{{ vm.cardPool[0].imageUrl }}" class="img-responsive">
+					<p>{{ vm.cardPool[0].message }}</p>
 				</div>
 			</div>
 		</div>

@@ -12,11 +12,26 @@ app.controller('MainController', ['$scope', '$routeParams', function ($scope, $r
 	vm.cardCode = $routeParams.cardCode || '';
 	vm.isCodeValid = false;
 
-	vm.card = [
+	vm.cardPool = [
 		{
 			id: 'a',
 			imageUrl: 'http://placevaughnandfranco.it/img/250/250',
-			message: 'Texto de la casilla'
+			message: 'A'
+		},
+		{
+			id: 'b',
+			imageUrl: 'http://placevaughnandfranco.it/img/250/250',
+			message: 'B'
+		},
+		{
+			id: 'c',
+			imageUrl: 'http://placevaughnandfranco.it/img/250/250',
+			message: 'C'
+		},
+		{
+			id: 'x',
+			imageUrl: 'http://placevaughnandfranco.it/img/250/250',
+			message: 'X'
 		}
 	];
 
@@ -45,7 +60,7 @@ app.controller('MainController', ['$scope', '$routeParams', function ($scope, $r
 
     vm.generateCardCode = function () {
     	vm.cardCode = "";
-    	var chars="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    	var chars="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOP";
     	var indexOut = 0;
     	for (var i = 0; i < 24; i++) {
     		indexOut = Math.floor(Math.random() * chars.length);
@@ -81,6 +96,7 @@ app.controller('MainController', ['$scope', '$routeParams', function ($scope, $r
 		// If valid length, check that code is valid having no duplicate or strange characters
     	// If not, generate valid code
     	if (!codePattern.test(vm.cardCode)) {
+    		// TODO: Show cardCode error message
     		console.log("pattern error");
     		vm.generateCardCode();
     		return;
@@ -95,7 +111,22 @@ app.controller('MainController', ['$scope', '$routeParams', function ($scope, $r
     };
 
     vm.drawCard = function () {
-    	// body...
+    	vm.card = {};
+
+    	// TODO Load the cards from JSON into card pool
+
+    	// First, create the slots map
+    	var cardMap = {}
+    	for (var i = 0; i < vm.cardPool.length; i++) {
+    		cardMap[vm.cardPool[i].id] = vm.cardPool[i];
+    	};
+
+    	var code = 'abccbaxacbac';
+    	// for (var i = 0; i < vm.cardCode.length; i++) {
+    		// vm.card[i] = cardMap[vm.cardCode[i]];
+    	for (var i = 0; i < code.length; i++) {
+    		vm.card[i] = cardMap[code[i]];
+    	};
     };
 
     // Emulates Splice on strings.
