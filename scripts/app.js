@@ -6,18 +6,18 @@ var app = angular.module('BingoApp', [
 
 app.config(['$routeProvider', function ($routeProvider) {
 	$routeProvider
-	.when('/bingo/', {
+	.when('/bingo', {
 		controller: 'MainController',
 		controllerAs: 'vm',
-		templateUrl: 'views/bingo.html'
+		templateUrl: 'views/main.html'
 	})
 	.when('/bingo/:conference/', {
-		controller: 'MainController',
+		controller: 'BingoController',
 		controllerAs: 'vm',
 		templateUrl: 'views/bingo.html'
 	})
 	.when('/bingo/:conference/:cardCode', {
-		controller: 'MainController',
+		controller: 'BingoController',
 		controllerAs: 'vm',
 		templateUrl: 'views/bingo.html'
 	})

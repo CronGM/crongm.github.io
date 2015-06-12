@@ -99,6 +99,22 @@ body > .container {
 	background: #0661B2;
 }
 
+.bingo-link {
+	display: block;
+	text-align: center;
+	padding: 30px 20px;
+	height: 100px;
+}
+
+	.bingo-link img {
+		margin: 0 auto;
+		max-height: 40px;
+	}
+
+.schedule-text {
+	margin: 0.1em 0 1em;
+}
+
 @media screen and (max-width: 480px) {
 	.slot p {
 		font-size: 10px;
