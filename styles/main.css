@@ -81,10 +81,9 @@ body > .container {
 }
 
 .footer {
-	position: fixed;
-	bottom: 0px;
-	width: 100%;
-	background-color: #F5F5F5;
+	background-color: #222;
+	color: #FFFFFF;
+	padding-top: 1em;
 }
 
 .xbox {

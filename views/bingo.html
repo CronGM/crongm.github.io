@@ -7,6 +7,8 @@
 		<p>Conference: {{ vm.conference }}</p>
 		<p>Card Code: {{ vm.cardCode }}</p>
 		<p>Is Code Valid? {{ vm.isCodeValid }}</p>
+		<p>Card Pool:</p>
+		<textarea>{{ vm.cardPool | json }}</textarea>
 		<p>Card:</p>
 		<textarea>{{ vm.card | json }}</textarea>
 		<p>Card Item 0: {{ vm.card[0].id }} {{ vm.card[0].imageUrl }} {{ vm.card[0].message }}</p>
@@ -20,10 +22,10 @@
 				<img id="card-header-logo" ng-src="{{ vm.cardLogoUrl }}">
 				<h1 class="sr-only">PlayStation</h1>
 			</header>
-			<div class="clearfix" ng-repeat="i in vm.getNumber(5) track by $index">
-				<div class="col-xs-2 slot" ng-repeat="i in vm.getNumber(5) track by $index">
-					<img ng-src="{{ vm.cardPool[0].imageUrl }}" class="img-responsive">
-					<p>{{ vm.cardPool[0].message }}</p>
+			<div class="clearfix" ng-repeat="row in vm.card.rows track by $index">
+				<div class="col-xs-2 slot" ng-repeat="slot in vm.card.rows[$index].slots track by $index">
+					<img ng-src="{{ slot.image }}" class="img-responsive">
+					<p>{{ slot.text }}</p>
 				</div>
 			</div>
 		</div>

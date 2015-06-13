@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('BingoController', ['$scope', '$routeParams', function ($scope, $routeParams) {
+app.controller('BingoController', ['$scope', '$routeParams', 'cards', function ($scope, $routeParams, cards) {
 	var vm = this;
 
 	// Enable debug UI
@@ -12,28 +12,7 @@ app.controller('BingoController', ['$scope', '$routeParams', function ($scope, $
 	vm.cardCode = $routeParams.cardCode || '';
 	vm.isCodeValid = false;
 
-	vm.cardPool = [
-		{
-			id: 'a',
-			imageUrl: 'http://placevaughnandfranco.it/img/250/250',
-			message: 'A'
-		},
-		{
-			id: 'b',
-			imageUrl: 'http://placevaughnandfranco.it/img/250/250',
-			message: 'B'
-		},
-		{
-			id: 'c',
-			imageUrl: 'http://placevaughnandfranco.it/img/250/250',
-			message: 'C'
-		},
-		{
-			id: 'x',
-			imageUrl: 'http://placevaughnandfranco.it/img/250/250',
-			message: 'X'
-		}
-	];
+	vm.cardPool = [];
 
 	vm.init = function () {
 		// Handle missing route parameters
@@ -111,28 +90,48 @@ app.controller('BingoController', ['$scope', '$routeParams', function ($scope, $
     };
 
     vm.drawCard = function () {
-    	vm.card = {};
-
-    	// TODO Load the cards from JSON into card pool
-
-    	// First, create the slots map
-    	var cardMap = {}
-    	for (var i = 0; i < vm.cardPool.length; i++) {
-    		cardMap[vm.cardPool[i].id] = vm.cardPool[i];
+    	vm.card = {
+    		"rows": []
     	};
 
-    	var code = 'abccbaxacbac';
-    	// for (var i = 0; i < vm.cardCode.length; i++) {
-    		// vm.card[i] = cardMap[vm.cardCode[i]];
-    	for (var i = 0; i < code.length; i++) {
-    		vm.card[i] = cardMap[code[i]];
-    	};
+    	// Load the cards from JSON into card pool
+    	cards.success(function (data) {
+    		vm.cardPool = data;
+
+	    	// First, create the slots map
+	    	var cardMap = {}
+	    	for (var i = 0; i < vm.cardPool.length; i++) {
+	    		cardMap[vm.cardPool[i].id] = vm.cardPool[i];
+	    	};
+
+	    	var code = 'abcdefghijkl';
+
+	    	var numberOfSlots = code.length; //25;
+	    	var cardIndex = 0;
+	    	var rowIndex = 0;
+	    	while (cardIndex < numberOfSlots) {
+	    		var cardRow = new rowTemplate();
+	    		for (var i = 0; i < 5; i++) {
+	    			cardRow.slots[i] = cardMap[code[cardIndex]];
+		    		cardIndex += 1;
+	    		};
+	    		vm.card.rows[rowIndex] = cardRow;
+	    		rowIndex += 1;
+	    	}
+    	});
+
     };
+
+    //--- HELPERS
 
     // Emulates Splice on strings.
 	function strSplice(str, index, count, add) {
 		return str.slice(0, index) + (add || "") + str.slice(index + count);
 	};
+
+	function rowTemplate () {
+		this.slots = [];
+	}
 
 	vm.init();
 }]);
