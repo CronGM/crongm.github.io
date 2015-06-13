@@ -1,207 +1,207 @@
 [
 	{
 		"id": "a",
-		"imageUrl": "images/",
-		"text": ""
-		},
+		"image": "quantum",
+		"text": "Quantum Break no está muerto"
+	},
 	{
 		"id": "b",
-		"imageUrl": "images/",
-		"text": ""
-		},
+		"image": "spark",
+		"text": "Más Project Spark"
+	},
 	{
 		"id": "c",
-		"imageUrl": "images/",
-		"text": ""
-		},
+		"image": "phil",
+		"text": "Al menos una playera cotorra de Phil Spencer"
+	},
 	{
 		"id": "d",
-		"imageUrl": "images/",
-		"text": ""
-		},
+		"image": "fable",
+		"text": "Fable Legends"
+	},
 	{
 		"id": "e",
-		"imageUrl": "images/",
-		"text": ""
-		},
+		"image": "crackdown",
+		"text": "Crackdown (no lo llamen Crackdown 3)"
+	},
 	{
 		"id": "f",
-		"imageUrl": "images/",
-		"text": ""
-		},
+		"image": "perfect_dark",
+		"text": "Perfect Dark reaparece"
+	},
 	{
 		"id": "g",
-		"imageUrl": "images/",
-		"text": ""
-		},
+		"image": "kinect",
+		"text": "Nada emocionante para Kinect"
+	},
 	{
 		"id": "h",
-		"imageUrl": "images/",
-		"text": ""
-		},
+		"image": "gold",
+		"text": "Juegos Retail para Gold"
+	},
 	{
 		"id": "i",
-		"imageUrl": "images/",
-		"text": ""
-		},
+		"image": "slim",
+		"text": "Nuevo modelo de XB1 (Slim/1TB)"
+	},
 	{
 		"id": "j",
-		"imageUrl": "images/",
-		"text": ""
-		},
+		"image": "windows",
+		"text": "Windows 10"
+	},
 	{
 		"id": "k",
-		"imageUrl": "images/",
-		"text": ""
-		},
+		"image": "battletoads",
+		"text": "Remake / Reboot de Battletoads"
+	},
 	{
 		"id": "l",
-		"imageUrl": "images/",
-		"text": ""
-		},
+		"image": "",
+		"text": "Banjo Kazooie (¿Threeie?)"
+	},
 	{
 		"id": "m",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "n",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "o",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "p",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "q",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "r",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "s",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "t",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "u",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "v",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "w",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "y",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "z",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "A",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "B",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "C",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "D",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "E",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "F",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "G",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "H",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "I",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "J",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "K",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "L",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "M",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "N",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "O",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		},
+	},
 	{
 		"id": "P",
-		"imageUrl": "images/",
+		"image": "",
 		"text": ""
-		}
+	}
 ]
