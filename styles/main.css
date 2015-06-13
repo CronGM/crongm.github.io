@@ -39,6 +39,14 @@ body > .container {
 	color: #c0392b;
 }
 
+#conference-title {
+	margin-bottom: 0;
+}
+
+#conference-time {
+	margin-top: -5px;
+}
+
 #card {
 	border: solid 1px black;
 }

@@ -7,14 +7,23 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', function (
 	vm.debug = true;
 
 	vm.validConferences = ['nintendo', 'playstation', 'xbox'];
+	vm.schedules = {
+		"nintendo": 'Lunes 16 de Junio, 11:00 AM',
+		"playstation": 'Lunes 15 de Junio, 8:00 PM',
+		"xbox": 'Lunes 15 de Junio, 11:30 AM'
+	};
 
 	vm.conference = $routeParams.conference || '';
 	vm.cardCode = $routeParams.cardCode || '';
 	vm.isCodeValid = false;
 
-	vm.cardPool = [];
 
 	vm.init = function () {
+		console.log("INIT BINGO CONTROLLER");
+		vm.cardPool = [];
+		vm.card = {
+    		"rows": []
+    	};
 		// Handle missing route parameters
 		if (vm.conference == '') {
 			vm.conference = vm.validConferences[Math.floor(Math.random() * 3)];
@@ -90,12 +99,9 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', function (
     };
 
     vm.drawCard = function () {
-    	vm.card = {
-    		"rows": []
-    	};
-
     	// Load the cards from JSON into card pool
     	cards.success(function (data) {
+    		console.log("SUCCESS SERVICE: " + vm.conference);
     		vm.cardPool = data;
 
 	    	// First, create the slots map
