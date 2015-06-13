@@ -17,6 +17,9 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', function (
 	vm.cardCode = $routeParams.cardCode || '';
 	vm.isCodeValid = false;
 
+	vm.cardPool = [];
+	vm.getCardPool = cards.getPool($routeParams);
+
 
 	vm.init = function () {
 		console.log("INIT BINGO CONTROLLER");
@@ -100,9 +103,9 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', function (
 
     vm.drawCard = function () {
     	// Load the cards from JSON into card pool
-    	cards.success(function (data) {
+    	vm.getCardPool.then(function (response) {
     		console.log("SUCCESS SERVICE: " + vm.conference);
-    		vm.cardPool = data;
+    		vm.cardPool = response;
 
 	    	// First, create the slots map
 	    	var cardMap = {}
@@ -125,6 +128,32 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', function (
 	    		rowIndex += 1;
 	    	}
     	});
+
+    	// cards.success(function (data) {
+    	// 	console.log("SUCCESS SERVICE: " + vm.conference);
+    	// 	vm.cardPool = data;
+
+	    // 	// First, create the slots map
+	    // 	var cardMap = {}
+	    // 	for (var i = 0; i < vm.cardPool.length; i++) {
+	    // 		cardMap[vm.cardPool[i].id] = vm.cardPool[i];
+	    // 	};
+
+	    // 	var code = 'abcdefghijkl';
+
+	    // 	var numberOfSlots = code.length; //25;
+	    // 	var cardIndex = 0;
+	    // 	var rowIndex = 0;
+	    // 	while (cardIndex < numberOfSlots) {
+	    // 		var cardRow = new rowTemplate();
+	    // 		for (var i = 0; i < 5; i++) {
+	    // 			cardRow.slots[i] = cardMap[code[cardIndex]];
+		   //  		cardIndex += 1;
+	    // 		};
+	    // 		vm.card.rows[rowIndex] = cardRow;
+	    // 		rowIndex += 1;
+	    // 	}
+    	// });
 
     };
 
