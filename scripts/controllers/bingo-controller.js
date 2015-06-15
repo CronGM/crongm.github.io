@@ -27,27 +27,35 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', function (
 		vm.card = {
     		"rows": []
     	};
-		// Handle missing route parameters
-		if (vm.conference == '') {
-			vm.conference = vm.validConferences[Math.floor(Math.random() * 3)];
-		}
-		if (vm.cardCode == '') {
-			vm.generateCardCode();
-		}
-		else {
-			vm.readCardCode();
-		};
 
-		vm.cardLogoUrl = 'images/logo_' + vm.conference + '.png';
+    	// Check that conference parameter is valid
+    	if (vm.validConferences.indexOf(vm.conference) == -1) {
+    		// TODO: Show conference error message
+    		console.log("conference error");
+			// vm.conference = vm.validConferences[Math.floor(Math.random() * 3)];
+    		return;
+    	}
+    	else {
+			// if (vm.conference == '') {
+			// 	vm.conference = vm.validConferences[Math.floor(Math.random() * 3)];
+			// }
+			// Handle missing route parameters
+			if (vm.cardCode == '') {
+				vm.generateCardCode();
+		    	// TODO Save to local storage
+			}
+			else {
+				vm.readCardCode();
+			};
 
-		vm.drawCard();
+			if (vm.isCodeValid) {
+				vm.cardLogoUrl = 'images/logo_' + vm.conference + '.png';
+				vm.drawCard();
+			};
 
-		return;
+			return;
+    	}
 	};
-
-	vm.getNumber = function(num) {
-        return new Array(num);
-    };
 
     vm.generateCardCode = function () {
     	vm.cardCode = "";
@@ -61,26 +69,19 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', function (
 
     	vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
 
+    	vm.isCodeValid = true;
+
     	return;
     };
 
     vm.readCardCode = function () {
     	var codePattern = /^(?:([A-Za-z])(?!.*\1))*$/;
 
-    	// Check that conference parameter is valid
-    	if (vm.validConferences.indexOf(vm.conference) == -1) {
-    		// TODO: Show conference error message
-    		console.log("conference error");
-			vm.conference = vm.validConferences[Math.floor(Math.random() * 3)];
-    		return;
-    	}
-    	
     	// If valid conference, check that code has exactly 24 characters
     	// If not, generate valid code
     	if (vm.cardCode.length != 24) {
     		// TODO: Show cardCode error message
     		console.log("length error");
-			vm.generateCardCode();
 			return;
     	}
     	
@@ -89,7 +90,6 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', function (
     	if (!codePattern.test(vm.cardCode)) {
     		// TODO: Show cardCode error message
     		console.log("pattern error");
-    		vm.generateCardCode();
     		return;
     	};
     	
@@ -158,6 +158,10 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', function (
     };
 
     //--- HELPERS
+
+	vm.getNumber = function(num) {
+        return new Array(num);
+    };
 
     // Emulates Splice on strings.
 	function strSplice(str, index, count, add) {
