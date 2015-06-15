@@ -75,13 +75,17 @@ main ol {
 }
 
 .card-row {
-	border: solid 1px yellow;
+	border: solid 1px black;
 }
 
 .slot {
 	position: relative;
-	border: solid 1px black;
+	border-right: solid 2px black;
 }
+
+	.slot:last-child {
+		border-right: none;
+	}
 
 .slot p {
 	background: transparent;

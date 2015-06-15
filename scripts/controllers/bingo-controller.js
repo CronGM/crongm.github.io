@@ -116,7 +116,7 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 	    		cardMap[vm.cardPool[i].id] = vm.cardPool[i];
 	    	};
 
-	    	var code = 'abcdefghijkl';
+	    	var code = 'abcdefghijklxmnopqrstuvwy';
 
 	    	var numberOfSlots = code.length; //25;
 	    	var cardIndex = 0;

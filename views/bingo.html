@@ -24,9 +24,9 @@
 				<img id="card-header-logo" ng-src="{{ vm.cardLogoUrl }}">
 				<h1 class="sr-only">{{ vm.conference }}</h1>
 			</header>
-			<div class="clearfix" ng-repeat="row in vm.card.rows track by $index">
+			<div class="clearfix card-row" ng-repeat="row in vm.card.rows track by $index">
 				<div class="col-xs-2 slot" ng-repeat="slot in vm.card.rows[$index].slots track by $index">
-					<img ng-src="{{ slot.image }}" class="img-responsive">
+					<img ng-src="images/{{ vm.conference }}/{{ slot.image }}.jpg" class="img-responsive">
 					<p>{{ slot.text }}</p>
 				</div>
 			</div>

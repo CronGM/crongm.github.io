@@ -32,7 +32,7 @@
 	{
 		"id": "g",
 		"image": "kinect",
-		"text": "Nada emocionante para Kinect"
+		"text": "Nada Emocionante para Kinect"
 	},
 	{
 		"id": "h",
@@ -42,7 +42,7 @@
 	{
 		"id": "i",
 		"image": "slim",
-		"text": "Nuevo modelo de XB1 (Slim/1TB)"
+		"text": "Nuevo Modelo de XB1 (Slim/1TB)"
 	},
 	{
 		"id": "j",
@@ -56,152 +56,157 @@
 	},
 	{
 		"id": "l",
-		"image": "banjo_kazooie",
+		"image": "banjo",
 		"text": "Banjo Kazooie (¿Threeie?)"
 	},
 	{
 		"id": "m",
-		"image": "",
-		"text": ""
+		"image": "scalebound",
+		"text": "Más de Scalebound"
 	},
 	{
 		"id": "n",
-		"image": "",
-		"text": ""
+		"image": "killer",
+		"text": "KI Season 3"
 	},
 	{
 		"id": "o",
-		"image": "",
-		"text": ""
+		"image": "indies",
+		"text": "¡Montaje de indies!"
 	},
 	{
 		"id": "p",
-		"image": "",
-		"text": ""
+		"image": "rock_band",
+		"text": "Rock Band en el escenario"
 	},
 	{
 		"id": "q",
-		"image": "",
-		"text": ""
+		"image": "nueva_ip",
+		"text": "Nueva IP first-party"
 	},
 	{
 		"id": "r",
-		"image": "",
-		"text": ""
+		"image": "gears",
+		"text": "El remaster de GOW es trilogía"
 	},
 	{
 		"id": "s",
-		"image": "",
-		"text": ""
+		"image": "mass_effect",
+		"text": "Más Effect (Get it?)"
 	},
 	{
 		"id": "t",
-		"image": "",
-		"text": ""
+		"image": "below",
+		"text": "Al fin saldrá Below"
 	},
 	{
 		"id": "u",
-		"image": "",
-		"text": ""
+		"image": "forza_6",
+		"text": "Gameplay de Forza 6"
 	},
 	{
 		"id": "v",
-		"image": "",
-		"text": ""
+		"image": "rare",
+		"text": "Algo nuevo de Rare"
 	},
 	{
 		"id": "w",
-		"image": "",
-		"text": ""
+		"image": "phantom_dust",
+		"text": "Phantom Dust tiene nuevo developer"
+	},
+	{
+		"id": "x",
+		"image": "calientito",
+		"text": "PROLAPSO"
 	},
 	{
 		"id": "y",
-		"image": "",
-		"text": ""
+		"image": "gears_4",
+		"text": "Nuevo Gears of War"
 	},
 	{
 		"id": "z",
-		"image": "",
-		"text": ""
+		"image": "guitar",
+		"text": "Guitar Hero en el escenario"
 	},
 	{
 		"id": "A",
-		"image": "",
-		"text": ""
+		"image": "kojima",
+		"text": "Kojima"
 	},
 	{
 		"id": "B",
-		"image": "",
-		"text": ""
+		"image": "silent_hills",
+		"text": "Silent Hills OMGWTFBBQ"
 	},
 	{
 		"id": "C",
-		"image": "",
-		"text": ""
+		"image": "fingiendo",
+		"text": "Gente fingiendo jugar"
 	},
 	{
 		"id": "D",
-		"image": "",
-		"text": ""
+		"image": "mirrors",
+		"text": "Mirror's Edge"
 	},
 	{
 		"id": "E",
-		"image": "",
-		"text": ""
+		"image": "assasins",
+		"text": "Assassin's Creed"
 	},
 	{
 		"id": "F",
-		"image": "",
-		"text": ""
+		"image": "mass",
+		"text": "Trilogía de Mass Effect HD"
 	},
 	{
 		"id": "G",
-		"image": "",
-		"text": ""
+		"image": "tony",
+		"text": "Tony Hawk con todo y patineta"
 	},
 	{
 		"id": "H",
-		"image": "",
-		"text": ""
+		"image": "last_gen",
+		"text": "Nuevo remaster de la generación pasada"
 	},
 	{
 		"id": "I",
-		"image": "",
-		"text": ""
+		"image": "silencio",
+		"text": "Silencio incómodo"
 	},
 	{
 		"id": "J",
-		"image": "",
-		"text": ""
+		"image": "meme",
+		"text": "Nace un nuevo meme"
 	},
 	{
 		"id": "K",
-		"image": "",
-		"text": ""
+		"image": "download_now",
+		"text": "Un juego que puedes descargar YA"
 	},
 	{
 		"id": "L",
-		"image": "",
-		"text": ""
+		"image": "gtav",
+		"text": "DLC de GTAV con exclusiva temporal"
 	},
 	{
 		"id": "M",
-		"image": "",
-		"text": ""
+		"image": "portatil",
+		"text": "Xbox portátil"
 	},
 	{
 		"id": "N",
-		"image": "",
-		"text": ""
+		"image": "shenmue3",
+		"text": "Shenmue 3"
 	},
 	{
 		"id": "O",
-		"image": "",
-		"text": ""
+		"image": "glitch",
+		"text": "Falla de hardware"
 	},
 	{
 		"id": "P",
-		"image": "",
-		"text": ""
+		"image": "minecraft",
+		"text": "Minecraft"
 	}
 ]
