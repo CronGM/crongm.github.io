@@ -15,6 +15,7 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 
 	vm.conference = $routeParams.conference || '';
 	vm.cardCode = $routeParams.cardCode || '';
+	vm.isSharedCode = $routeParams.shared || false;
 	vm.isCodeValid = false;
 
 	vm.cardPool = [];
@@ -68,7 +69,6 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 
     	// Save to local storage
     	localStorageService.set(vm.conference, vm.cardCode);
-
     	vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
 
     	vm.isCodeValid = true;
@@ -95,6 +95,7 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
     		return;
     	};
     	
+    	vm.shareCode = vm.cardCode;
     	// If valid code insert middle slot in card
     	vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
 

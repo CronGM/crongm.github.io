@@ -25,8 +25,8 @@ body > .container {
 	padding-bottom: 80px;
 }
 
-p,
-ol {
+main p,
+main ol {
 	font-size: 18px;
 }
 
@@ -93,6 +93,19 @@ ol {
 	font-size: 12px;
 	line-height: 1em;
 	min-height: 28px;
+}
+
+#share-area {
+	margin: 1em 0 2em;
+}
+
+#share-link {
+	cursor: text;
+	background: white;
+}
+
+#create-card-area {
+	margin-top: 3em;
 }
 
 .footer {
