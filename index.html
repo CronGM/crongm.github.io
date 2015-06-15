@@ -30,11 +30,11 @@
 						</a>
 					</header>
 
-					<nav class="collapse navbar-collapse" id="js-navbar-collapse">
+					<nav id="js-navbar-collapse" class="collapse navbar-collapse" ng-controller="TopNavController as link">
 						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a href="#/bingo">Inicio</a></li>
-							<li><a href="#/rules">Reglas</a></li>
-							<li><a ng-href="#/about">¿Por Qué?</a></li>
+							<li ng-class="{ active: link.isActive('/bingo') }"><a href="#/bingo">Inicio</a></li>
+							<li ng-class="{ active: link.isActive('/rules') }"><a href="#/rules">Reglas</a></li>
+							<li ng-class="{ active: link.isActive('/about') }"><a ng-href="#/about">¿Por Qué?</a></li>
 						</ul>
 					</nav>
 
@@ -80,6 +80,7 @@
 		<script src="scripts/controllers/main-controller.js"></script>
 		<script src="scripts/controllers/bingo-controller.js"></script>
 		<script src="scripts/controllers/about-controller.js"></script>
+		<script src="scripts/controllers/topnav-controller.js"></script>
 
 		<!-- Services -->
 		<script src="scripts/services/cards.js"></script>
