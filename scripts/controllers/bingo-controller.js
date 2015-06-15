@@ -4,7 +4,7 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 	var vm = this;
 
 	// Enable debug UI
-	vm.debug = true;
+	vm.debug = false;
 
 	vm.validConferences = ['nintendo', 'playstation', 'xbox'];
 	vm.schedules = {
@@ -116,15 +116,15 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 	    		cardMap[vm.cardPool[i].id] = vm.cardPool[i];
 	    	};
 
-	    	var code = 'abcdefghijklxmnopqrstuvwy';
+	    	// var code = 'zABCDEFGHIJKxLMNOPrstuvwy';
 
-	    	var numberOfSlots = code.length; //25;
+	    	var numberOfSlots = 25; // code.length;
 	    	var cardIndex = 0;
 	    	var rowIndex = 0;
 	    	while (cardIndex < numberOfSlots) {
 	    		var cardRow = new rowTemplate();
 	    		for (var i = 0; i < 5; i++) {
-	    			cardRow.slots[i] = cardMap[code[cardIndex]];
+	    			cardRow.slots[i] = cardMap[vm.cardCode[cardIndex]];
 		    		cardIndex += 1;
 	    		};
 	    		vm.card.rows[rowIndex] = cardRow;

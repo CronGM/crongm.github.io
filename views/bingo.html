@@ -17,7 +17,7 @@
 	</div>
 
 	<!-- TODO: Implement centered columns -->
-	<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+	<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" ng-if="vm.isCodeValid">
 		<p class="text-right"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://disparasconb.com/bingo/{{ vm.conference }}/{{ vm.shareCode }}/shared" data-text="Esta es mi tabla del Bingo del Milenio #E3 ¡Participa para ganar nada!" data-lang="es" data-count="none" data-hashtags="dcbingo">Twittear</a></p>
 		<div id="card" class="{{ vm.conference }} clearfix">
 			<header class="text-center">
@@ -33,36 +33,36 @@
 		</div>
 		<div id="share-area" class="text-center" ng-if="!vm.isSharedCode">
 			<p><small>Comparte esta tabla con tus amigos</small></p>
-			<input type="text" id="share-link" class="form-control" value="http://disparasconb.com/bingo/{{ vm.conference }}/{{ vm.shareCode }}" onfocus="this.setSelectionRange(0, this.value.length)" readonly />
+			<input type="text" id="share-link" class="form-control" value="http://disparasconb.com/bingo/{{ vm.conference }}/{{ vm.shareCode }}/shared" onfocus="this.setSelectionRange(0, this.value.length)" readonly />
 		</div>
 	</div>
 </div>
 
 <div id="create-card-area" class="row" ng-if="vm.isSharedCode">
-		<div class="col-xs-12">
-			<p class="h4">Crea tu propia tarjeta para participar</p>
-		</div>
-		<div class="col-xs-12 col-sm-4">
-			<a ng-href="#/bingo/xbox/{{ vm.xboxCardCode }}" class="bingo-link xbox">
-				<img src="images/logo_xbox.png" class="img-responsive" alt="xbox">
-			</a>
-			<p class="text-center schedule-text small">Lunes 15 de Junio, 11:30 AM
-			</p>
-		</div>
-		<div class="col-xs-12 col-sm-4">
-			<a ng-href="#/bingo/playstation/{{ vm.playstationCardCode }}" class="bingo-link playstation">
-				<img src="images/logo_playstation.png" class="img-responsive" alt="playstation">
-			</a>
-			<p class="text-center schedule-text small">Lunes 15 de Junio, 8:00 PM
-			</p>
-		</div>
-		<div class="col-xs-12 col-sm-4">
-			<a ng-href="#/bingo/nintendo/{{ vm.nintendoCardCode }}" class="bingo-link nintendo">
-				<img src="images/logo_nintendo.png" class="img-responsive" alt="nintendo">
-			</a>
-			<p class="text-center schedule-text small">Martes 16 de Junio, 11:00 AM
-			</p>
-		</div>
+	<div class="col-xs-12">
+		<p class="h4">Crea tu propia tarjeta para participar</p>
 	</div>
+	<div class="col-xs-12 col-sm-4">
+		<a ng-href="#/bingo/xbox/{{ vm.xboxCardCode }}" class="bingo-link xbox">
+			<img src="images/logo_xbox.png" class="img-responsive" alt="xbox">
+		</a>
+		<p class="text-center schedule-text small">Lunes 15 de Junio, 11:30 AM
+		</p>
+	</div>
+	<div class="col-xs-12 col-sm-4">
+		<a ng-href="#/bingo/playstation/{{ vm.playstationCardCode }}" class="bingo-link playstation">
+			<img src="images/logo_playstation.png" class="img-responsive" alt="playstation">
+		</a>
+		<p class="text-center schedule-text small">Lunes 15 de Junio, 8:00 PM
+		</p>
+	</div>
+	<div class="col-xs-12 col-sm-4">
+		<a ng-href="#/bingo/nintendo/{{ vm.nintendoCardCode }}" class="bingo-link nintendo">
+			<img src="images/logo_nintendo.png" class="img-responsive" alt="nintendo">
+		</a>
+		<p class="text-center schedule-text small">Martes 16 de Junio, 11:00 AM
+		</p>
+	</div>
+</div>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
