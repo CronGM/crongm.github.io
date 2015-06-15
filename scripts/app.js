@@ -26,6 +26,12 @@ app.config(['$routeProvider', function ($routeProvider) {
 		controllerAs: 'vm',
 		templateUrl: 'views/bingo.html'
 	})
+	.when('/rules', {
+		templateUrl: 'views/rules.html'
+	})
+	.when('/about', {
+		templateUrl: 'views/about.html'
+	})
 	.otherwise({
 		redirectTo: '/bingo'
 	});

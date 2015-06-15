@@ -25,6 +25,11 @@ body > .container {
 	padding-bottom: 80px;
 }
 
+p,
+ol {
+	font-size: 18px;
+}
+
 .navbar-brand {
 	padding-bottom: 3px;
 	padding-top: 3px;
@@ -39,11 +44,13 @@ body > .container {
 	color: #c0392b;
 }
 
-#conference-title {
+#conference-title,
+#first-title {
 	margin-bottom: 0;
 }
 
-#conference-time {
+#conference-time,
+#second-title {
 	margin-top: -5px;
 }
 
