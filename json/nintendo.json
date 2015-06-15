@@ -1,207 +1,212 @@
 [
 	{
 		"id": "a",
-		"image": "nintendo",
-		"text": "nintendo"
+		"image": "pilotwings",
+		"text": "Pilotwings Wii U"
 	},
 	{
 		"id": "b",
-		"image": "",
-		"text": ""
+		"image": "smash_dlc",
+		"text": "Smash Bros DLC"
 	},
 	{
 		"id": "c",
-		"image": "",
-		"text": ""
+		"image": "pokken",
+		"text": "Pokken Tournament en América"
 	},
 	{
 		"id": "d",
-		"image": "",
-		"text": ""
+		"image": "f-zero",
+		"text": "No hay nuevo F-Zero"
 	},
 	{
 		"id": "e",
-		"image": "",
-		"text": ""
+		"image": "mario_kart",
+		"text": "Más DLC de Mario Kart"
 	},
 	{
 		"id": "f",
-		"image": "",
-		"text": ""
+		"image": "super_metroid",
+		"text": "Super Metroid Remake en 3DS"
 	},
 	{
 		"id": "g",
-		"image": "",
-		"text": ""
+		"image": "amiibos_problema",
+		"text": "Solucionan el problema de Amiibos"
 	},
 	{
 		"id": "h",
-		"image": "",
-		"text": ""
+		"image": "devils_third",
+		"text": "Devil's Third de Itagaki"
 	},
 	{
 		"id": "i",
-		"image": "",
-		"text": ""
+		"image": "dragon_quest",
+		"text": "Dragon Quest VIII"
 	},
 	{
 		"id": "j",
-		"image": "",
-		"text": ""
+		"image": "miyamoto",
+		"text": "Miyamoto se disfraza"
 	},
 	{
 		"id": "k",
-		"image": "",
-		"text": ""
+		"image": "animal_crossing",
+		"text": "Animal Crossing Wii U"
 	},
 	{
 		"id": "l",
-		"image": "",
-		"text": ""
+		"image": "projectxzone",
+		"text": "Project X Zone 2"
 	},
 	{
 		"id": "m",
-		"image": "",
-		"text": ""
+		"image": "ace_attorney",
+		"text": "The Great Ace Attorney"
 	},
 	{
 		"id": "n",
-		"image": "",
-		"text": ""
+		"image": "zelda",
+		"text": "Nombre de Zelda Wii U"
 	},
 	{
 		"id": "o",
-		"image": "",
-		"text": ""
+		"image": "iwata",
+		"text": "Amiibo de Iwata"
 	},
 	{
 		"id": "p",
-		"image": "",
-		"text": ""
+		"image": "vitality_sensor",
+		"text": "Otro add-on inútil"
 	},
 	{
 		"id": "q",
-		"image": "",
-		"text": ""
+		"image": "virtual_console",
+		"text": "VC SNES en 3DS / GCN en Wii U"
 	},
 	{
 		"id": "r",
-		"image": "",
-		"text": ""
+		"image": "star_fox",
+		"text": "Multiplayer en Star Fox"
 	},
 	{
 		"id": "s",
-		"image": "",
-		"text": ""
+		"image": "pokemon_stadium",
+		"text": "Pokémon Stadium Wii U"
 	},
 	{
 		"id": "t",
-		"image": "",
-		"text": ""
+		"image": "mario_sports",
+		"text": "Nuevo juego de deportes de Mario"
 	},
 	{
 		"id": "u",
-		"image": "",
-		"text": ""
+		"image": "nuevos_amiibos",
+		"text": "Nuevos Amiibos"
 	},
 	{
 		"id": "v",
-		"image": "",
-		"text": ""
+		"image": "yokai",
+		"text": "Fuerte promoción de Yo-kai Watch"
 	},
 	{
 		"id": "w",
-		"image": "",
-		"text": ""
+		"image": "shinmegami",
+		"text": "Shin Megami Tensei X Fire Emblem"
+	},
+	{
+		"id": "x",
+		"image": "calientito",
+		"text": "PROLAPSO"
 	},
 	{
 		"id": "y",
-		"image": "",
-		"text": ""
+		"image": "indies",
+		"text": "¡Montaje de indies!"
 	},
 	{
 		"id": "z",
-		"image": "",
-		"text": ""
+		"image": "fatal",
+		"text": "Fatal Frame"
 	},
 	{
 		"id": "A",
-		"image": "",
-		"text": ""
+		"image": "new",
+		"text": "Nueva IP"
 	},
 	{
 		"id": "B",
-		"image": "",
-		"text": ""
+		"image": "meme",
+		"text": "Nace un nuevo meme"
 	},
 	{
 		"id": "C",
-		"image": "",
-		"text": ""
+		"image": "bill",
+		"text": "Bill Trinen hace el ridículo"
 	},
 	{
 		"id": "D",
-		"image": "",
-		"text": ""
+		"image": "precio",
+		"text": "Wii U baja de precio"
 	},
 	{
 		"id": "E",
-		"image": "",
-		"text": ""
+		"image": "snes",
+		"text": "SNES Remix"
 	},
 	{
 		"id": "F",
-		"image": "",
-		"text": ""
+		"image": "nintendoland",
+		"text": "Nintendoland 2"
 	},
 	{
 		"id": "G",
-		"image": "",
-		"text": ""
+		"image": "3ds",
+		"text": "New 3DS edición especial"
 	},
 	{
 		"id": "H",
-		"image": "",
-		"text": ""
+		"image": "doug",
+		"text": "Doug Bowser aparece"
 	},
 	{
 		"id": "I",
-		"image": "",
-		"text": ""
+		"image": "bajaya",
+		"text": "Juego que puedes descargar YA"
 	},
 	{
 		"id": "J",
-		"image": "",
-		"text": ""
+		"image": "freetoplay",
+		"text": "Nuevo juego F2P"
 	},
 	{
 		"id": "K",
-		"image": "",
-		"text": ""
+		"image": "remaster",
+		"text": "Nuevo remaster de last-gen"
 	},
 	{
 		"id": "L",
-		"image": "",
-		"text": ""
+		"image": "reggie",
+		"text": "Amiibo de Reggie"
 	},
 	{
 		"id": "M",
-		"image": "",
-		"text": ""
+		"image": "xenoblade",
+		"text": "Fecha de Xenoblade Chronicles X"
 	},
 	{
 		"id": "N",
-		"image": "",
-		"text": ""
+		"image": "snap",
+		"text": "Pokémon Snap"
 	},
 	{
 		"id": "O",
-		"image": "",
-		"text": ""
+		"image": "retro",
+		"text": "Nuevo juego de Retro"
 	},
 	{
 		"id": "P",
-		"image": "",
-		"text": ""
+		"image": "reggie",
+		"text": "Amiibo de Reggie"
 	}
 ]

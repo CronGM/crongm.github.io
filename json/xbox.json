@@ -12,7 +12,7 @@
 	{
 		"id": "c",
 		"image": "phil",
-		"text": "Al menos una playera cotorra de Phil Spencer"
+		"text": "Playera de Phil Spencer"
 	},
 	{
 		"id": "d",
@@ -22,7 +22,7 @@
 	{
 		"id": "e",
 		"image": "crackdown",
-		"text": "Crackdown (no lo llamen Crackdown 3)"
+		"text": "Crackdown (no es Crackdown 3)"
 	},
 	{
 		"id": "f",
@@ -32,17 +32,17 @@
 	{
 		"id": "g",
 		"image": "kinect",
-		"text": "Nada Emocionante para Kinect"
+		"text": "Nada Emocionante de Kinect"
 	},
 	{
 		"id": "h",
 		"image": "gold",
-		"text": "Juegos Retail para Gold"
+		"text": "Juegos AAA para Gold"
 	},
 	{
 		"id": "i",
 		"image": "slim",
-		"text": "Nuevo Modelo de XB1 (Slim/1TB)"
+		"text": "Nuevo Xbox One (Slim/1TB)"
 	},
 	{
 		"id": "j",
@@ -52,7 +52,7 @@
 	{
 		"id": "k",
 		"image": "battletoads",
-		"text": "Remake / Reboot de Battletoads"
+		"text": "Battletoads Remake / Reboot"
 	},
 	{
 		"id": "l",
@@ -77,7 +77,7 @@
 	{
 		"id": "p",
 		"image": "rock_band",
-		"text": "Rock Band en el escenario"
+		"text": "Rock Band aparece"
 	},
 	{
 		"id": "q",
@@ -87,7 +87,7 @@
 	{
 		"id": "r",
 		"image": "gears",
-		"text": "El remaster de GOW es trilogía"
+		"text": "Gears of War Trilogy"
 	},
 	{
 		"id": "s",
@@ -102,7 +102,7 @@
 	{
 		"id": "u",
 		"image": "forza_6",
-		"text": "Gameplay de Forza 6"
+		"text": "Forza 6"
 	},
 	{
 		"id": "v",
@@ -112,7 +112,7 @@
 	{
 		"id": "w",
 		"image": "phantom_dust",
-		"text": "Phantom Dust tiene nuevo developer"
+		"text": "Phantom Dust con nuevo developer"
 	},
 	{
 		"id": "x",
@@ -127,17 +127,17 @@
 	{
 		"id": "z",
 		"image": "guitar",
-		"text": "Guitar Hero en el escenario"
+		"text": "Guitar Hero aparece"
 	},
 	{
 		"id": "A",
 		"image": "kojima",
-		"text": "Kojima"
+		"text": "Kojima está vivo"
 	},
 	{
 		"id": "B",
 		"image": "silent_hills",
-		"text": "Silent Hills OMGWTFBBQ"
+		"text": "Silent Hills OMG WTF BBQ"
 	},
 	{
 		"id": "C",
@@ -157,17 +157,17 @@
 	{
 		"id": "F",
 		"image": "mass",
-		"text": "Trilogía de Mass Effect HD"
+		"text": "Mass Effect Trilogy HD"
 	},
 	{
 		"id": "G",
 		"image": "tony",
-		"text": "Tony Hawk con todo y patineta"
+		"text": "Tony Hawk, con patineta"
 	},
 	{
 		"id": "H",
 		"image": "last_gen",
-		"text": "Nuevo remaster de la generación pasada"
+		"text": "Nuevo remaster de last-gen"
 	},
 	{
 		"id": "I",
@@ -182,12 +182,12 @@
 	{
 		"id": "K",
 		"image": "download_now",
-		"text": "Un juego que puedes descargar YA"
+		"text": "Juego que puedes descargar YA"
 	},
 	{
 		"id": "L",
 		"image": "gtav",
-		"text": "DLC de GTAV con exclusiva temporal"
+		"text": "GTAV DLC con exclusiva temporal"
 	},
 	{
 		"id": "M",
