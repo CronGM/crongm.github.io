@@ -1,8 +1,13 @@
 'use strict';
 
 var app = angular.module('BingoApp', [
-	'ngRoute'
+	'ngRoute',
+	'LocalStorageModule'
 ]);
+
+app.config(['localStorageServiceProvider', function (localStorageServiceProvider) {
+	localStorageServiceProvider.setPrefix('dcbingo');
+}]);
 
 app.config(['$routeProvider', function ($routeProvider) {
 	$routeProvider

@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('BingoController', ['$scope', '$routeParams', 'cards', function ($scope, $routeParams, cards) {
+app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStorageService', function ($scope, $routeParams, cards, localStorageService) {
 	var vm = this;
 
 	// Enable debug UI
@@ -42,7 +42,6 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', function (
 			// Handle missing route parameters
 			if (vm.cardCode == '') {
 				vm.generateCardCode();
-		    	// TODO Save to local storage
 			}
 			else {
 				vm.readCardCode();
@@ -66,6 +65,9 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', function (
     		vm.cardCode += chars[indexOut];
     		chars = strSplice(chars, indexOut, 1);
     	};
+
+    	// Save to local storage
+    	localStorageService.set(vm.conference, vm.cardCode);
 
     	vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
 

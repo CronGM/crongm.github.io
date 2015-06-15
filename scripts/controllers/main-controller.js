@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('MainController', ['$scope', '$routeParams', function ($scope, $routeParams) {
+app.controller('MainController', ['$scope', '$routeParams', 'localStorageService', function ($scope, $routeParams, localStorageService) {
 	var vm = this;
 
 	// Enable debug UI
@@ -8,9 +8,13 @@ app.controller('MainController', ['$scope', '$routeParams', function ($scope, $r
 
 	vm.init = function () {
         // load links from local storage here
-        vm.nintendoCard = '';
-        vm.playstationCard = '';
-        vm.xboxCard = '';
+        var localNintendoCard = localStorageService.get('nintendo');
+        var localPlaystationCard = localStorageService.get('playstation');
+        var localXboxCard = localStorageService.get('xbox');
+
+        vm.nintendoCardCode = localNintendoCard || '';
+        vm.playstationCardCode = localPlaystationCard || '';
+        vm.xboxCardCode = localXboxCard || '';
 		return;
 	};
 
