@@ -6,6 +6,8 @@ app.controller('MainController', ['$scope', '$routeParams', 'localStorageService
 	// Enable debug UI
 	vm.debug = true;
 
+	vm.hideTermsAlert = localStorageService.get('hideTerms') || false;
+
 	vm.init = function () {
         // load links from local storage here
         var localNintendoCard = localStorageService.get('nintendo');
@@ -17,6 +19,10 @@ app.controller('MainController', ['$scope', '$routeParams', 'localStorageService
         vm.xboxCardCode = localXboxCard || '';
 		return;
 	};
+
+	vm.dismissTermsAlert = function () {
+		localStorageService.set('hideTerms', true);
+	}
 
 	vm.init();
 }]);
