@@ -146,7 +146,38 @@ main ol {
 	margin: 0.1em 0 1em;
 }
 
-@media screen and (max-width: 480px) {
+.grid {
+	display: table;
+	width: 100%;
+}
+
+.table-row {
+	display: table-row;
+}
+
+.table-cell {
+	display: table-cell;
+	border: 1px solid black;
+	width: 20%;
+	max-width: 20%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.table-cell img {
+	max-width: 100%;
+	border-bottom: 2px solid black;
+}
+.table-cell div {
+	padding: 0.5em 0.5em;
+	color: white;
+	text-align: center;
+	font-size: 12px;
+	line-height: 1em;
+	margin: 0;
+}
+
+@media screen and (max-width: 639px) {
 	.slot {
 		min-height: 94px;
 	}
@@ -155,5 +186,10 @@ main ol {
 		font-size: 9px;
 		line-height: 1.1em;
 		min-height: 25px;
+	}
+	
+	.table-cell div {
+		font-size: 9px;
+		line-height: 1.1em;
 	}
 }
