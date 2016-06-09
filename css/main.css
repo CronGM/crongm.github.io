@@ -27,11 +27,14 @@ main ol {
 #second-title {
   margin-top: -5px;
 }
-#card border solid 1px black div[class^="col-"] {
+#card {
+  border: 1px solid #000;
+}
+#card div[class^="col-"] {
   padding: 0;
   width: 20%;
 }
-#card border solid 1px black header {
+#card header {
   color: #fff;
   margin: 0;
   padding: 0.5em;
