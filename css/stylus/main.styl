@@ -1,5 +1,11 @@
 // TODO: change to individual files with @require
 
+// Media queries
+$mobile_only = 'screen and (max-width 639px)'
+$xbox = #107C10
+$nintendo = #D01A19
+$playstation = #0661B2
+
 body
     > .container
         padding-bottom 80px
@@ -86,13 +92,25 @@ main
 	padding-top 1em
 
 .xbox
-	background #107C10
+    background $xbox
+    .table-cell
+        &.active
+            &:after
+                background $xbox
 
 .nintendo
-	background #D01A19
+    background $nintendo
+    .table-cell
+        &.active
+            &:after
+                background $nintendo
 
 .playstation
-	background #0661B2
+    background $playstation
+    .table-cell
+        &.active
+            &:after
+                background $playstation
 
 .bingo-link
 	display block
@@ -141,7 +159,7 @@ main
             background white
             content ""
             display block
-            opacity 0.6
+            opacity 0.75
             position absolute
             top 0
             left 0
@@ -149,7 +167,6 @@ main
             bottom 0
 
         &:after
-            background green
             border-radius 50%
             color white
             content "\e800"
@@ -164,17 +181,21 @@ main
             position absolute
             top 50%
             left 50%
-
-@media screen and (max-width 639px)
+            
+@media $mobile_only
     .slot
         min-height 94px;
 
     .slot p
-        font-size 9px;
-        line-height 1.1em;
-        min-height 25px;
+        font-size 9px
+        line-height 1.1em
+        min-height 25px
 
     .table-cell
         div
-            font-size 9px;
-            line-height 1.1em;
+            font-size 9px
+            line-height 1.1em
+
+        &.active
+            &:after
+                font-size 2.5em

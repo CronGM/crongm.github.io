@@ -82,10 +82,19 @@ main ol {
 .xbox {
   background: #107c10;
 }
+.xbox .table-cell.active:after {
+  background: #107c10;
+}
 .nintendo {
   background: #d01a19;
 }
+.nintendo .table-cell.active:after {
+  background: #d01a19;
+}
 .playstation {
+  background: #0661b2;
+}
+.playstation .table-cell.active:after {
   background: #0661b2;
 }
 .bingo-link {
@@ -133,7 +142,7 @@ main ol {
   background: #fff;
   content: "";
   display: block;
-  opacity: 0.6;
+  opacity: 0.75;
   position: absolute;
   top: 0;
   left: 0;
@@ -141,7 +150,6 @@ main ol {
   bottom: 0;
 }
 .table-cell.active:after {
-  background: #008000;
   border-radius: 50%;
   color: #fff;
   content: "\e800";
@@ -169,5 +177,8 @@ main ol {
   .table-cell div {
     font-size: 9px;
     line-height: 1.1em;
+  }
+  .table-cell.active:after {
+    font-size: 2.5em;
   }
 }
