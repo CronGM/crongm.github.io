@@ -130,10 +130,10 @@ main ol {
   margin: 0;
 }
 .table-cell.active:before {
-  background: #f00;
+  background: #fff;
   content: "";
   display: block;
-  opacity: 0.5;
+  opacity: 0.6;
   position: absolute;
   top: 0;
   left: 0;
@@ -142,14 +142,17 @@ main ol {
 }
 .table-cell.active:after {
   background: #008000;
+  border-radius: 50%;
   color: #fff;
-  content: "A";
+  content: "\e800";
   display: block;
+  font-family: fontello;
+  font-size: 3em;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.5;
   text-align: center;
   transform: translateX(-50%) translateY(-50%);
-  width: 100%;
+  width: 1.5em;
   position: absolute;
   top: 50%;
   left: 50%;
