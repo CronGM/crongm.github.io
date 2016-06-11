@@ -32,10 +32,10 @@
 			</div>-->
 			<div class="grid">
 				<div class="table-row" ng-repeat="row in vm.card.rows track by $index">
-					<div class="table-cell" ng-repeat="slot in vm.card.rows[$index].slots track by $index">
+					<card-cell class="table-cell" ng-repeat="slot in vm.card.rows[$index].slots track by $index">
 						<img ng-src="images/{{ vm.conference }}/{{ slot.image }}.jpg" class="	">
 						<div>{{ slot.text }}</div>
-					</div>
+					</card-cell>
 				</div>
 			</div>
 		</div>

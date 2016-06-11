@@ -82,19 +82,19 @@ main ol {
 .xbox {
   background: #107c10;
 }
-.xbox .table-cell.active:after {
+.xbox .table-cell.checked:after {
   background: #107c10;
 }
 .nintendo {
   background: #d01a19;
 }
-.nintendo .table-cell.active:after {
+.nintendo .table-cell.checked:after {
   background: #d01a19;
 }
 .playstation {
   background: #0661b2;
 }
-.playstation .table-cell.active:after {
+.playstation .table-cell.checked:after {
   background: #0661b2;
 }
 .bingo-link {
@@ -118,6 +118,7 @@ main ol {
   display: table-row;
 }
 .table-cell {
+  cursor: pointer;
   display: table-cell;
   border: 1px solid #000;
   width: 20%;
@@ -138,7 +139,7 @@ main ol {
   line-height: 1em;
   margin: 0;
 }
-.table-cell.active:before {
+.table-cell.checked:before {
   background: #fff;
   content: "";
   display: block;
@@ -149,7 +150,7 @@ main ol {
   right: 0;
   bottom: 0;
 }
-.table-cell.active:after {
+.table-cell.checked:after {
   border-radius: 50%;
   color: #fff;
   content: "\e800";
@@ -178,7 +179,7 @@ main ol {
     font-size: 9px;
     line-height: 1.1em;
   }
-  .table-cell.active:after {
+  .table-cell.checked:after {
     font-size: 2.5em;
   }
 }
