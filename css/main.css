@@ -114,6 +114,7 @@ main ol {
   width: 20%;
   max-width: 20%;
   overflow: hidden;
+  position: relative;
   text-overflow: ellipsis;
 }
 .table-cell img {
@@ -127,6 +128,31 @@ main ol {
   font-size: 12px;
   line-height: 1em;
   margin: 0;
+}
+.table-cell.active:before {
+  background: #f00;
+  content: "";
+  display: block;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.table-cell.active:after {
+  background: #008000;
+  color: #fff;
+  content: "A";
+  display: block;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 @media screen and (max-width: 639px) {
   .slot {
