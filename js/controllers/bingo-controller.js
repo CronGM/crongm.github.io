@@ -7,6 +7,8 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 	vm.debug = false;
 
 	vm.validConferences = ['nintendo', 'playstation', 'xbox'];
+
+	// TODO: Implement for easy modification/localization
 	vm.schedules = {
 		"nintendo": 'Lunes 16 de Junio, 11:00 AM',
 		"playstation": 'Lunes 15 de Junio, 8:00 PM',
@@ -22,6 +24,7 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 	vm.getCardPool = cards.getPool($routeParams);
 
 
+	// TODO: This could be moved to a directive
 	vm.init = function () {
 		console.log("INIT BINGO CONTROLLER");
 		vm.cardPool = [];
@@ -69,6 +72,7 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 
     	// Save to local storage
     	localStorageService.set(vm.conference, vm.cardCode);
+		vm.shareCode = vm.cardCode;
     	vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
 
     	vm.isCodeValid = true;
@@ -77,6 +81,7 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
     };
 
     vm.readCardCode = function () {
+		// Checks that no card is repeated
     	var codePattern = /^(?:([A-Za-z])(?!.*\1))*$/;
 
     	// If valid conference, check that code has exactly 24 characters
@@ -162,9 +167,9 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 
     //--- HELPERS
 
-	vm.getNumber = function(num) {
-        return new Array(num);
-    };
+	// vm.getNumber = function(num) {
+    //     return new Array(num);
+    // };
 
     // Emulates Splice on strings.
 	function strSplice(str, index, count, add) {
