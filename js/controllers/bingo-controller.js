@@ -1,12 +1,12 @@
 'use strict';
 
-app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStorageService', function ($scope, $routeParams, cards, localStorageService) {
+app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStorageService', '$location', function ($scope, $routeParams, cards, localStorageService, $location) {
 	var vm = this;
+	var validConferences = ['nintendo', 'playstation', 'xbox'];
+	var getCardPool = cards.getPool($routeParams);
 
 	// Enable debug UI
 	vm.debug = false;
-
-	vm.validConferences = ['nintendo', 'playstation', 'xbox'];
 
 	// TODO: Implement for easy modification/localization
 	vm.schedules = {
@@ -19,46 +19,9 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 	vm.cardCode = $routeParams.cardCode || '';
 	vm.isSharedCode = $routeParams.shared || false;
 	vm.isCodeValid = false;
+	vm.urlHost = $location.host();
 
 	vm.cardPool = [];
-	vm.getCardPool = cards.getPool($routeParams);
-
-
-	// TODO: This could be moved to a directive
-	vm.init = function () {
-		console.log("INIT BINGO CONTROLLER");
-		vm.cardPool = [];
-		vm.card = {
-    		"rows": []
-    	};
-
-    	// Check that conference parameter is valid
-    	if (vm.validConferences.indexOf(vm.conference) == -1) {
-    		// TODO: Show conference error message
-    		console.log("conference error");
-			// vm.conference = vm.validConferences[Math.floor(Math.random() * 3)];
-    		return;
-    	}
-    	else {
-			// if (vm.conference == '') {
-			// 	vm.conference = vm.validConferences[Math.floor(Math.random() * 3)];
-			// }
-			// Handle missing route parameters
-			if (vm.cardCode == '') {
-				vm.generateCardCode();
-			}
-			else {
-				vm.readCardCode();
-			};
-
-			if (vm.isCodeValid) {
-				vm.cardLogoUrl = 'images/logo_' + vm.conference + '.png';
-				vm.drawCard();
-			};
-
-			return;
-    	}
-	};
 
     vm.generateCardCode = function () {
     	vm.cardCode = "";
@@ -80,7 +43,7 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
     	return;
     };
 
-    vm.readCardCode = function () {
+    var readCardCode = function () {
 		// Checks that no card is repeated
     	var codePattern = /^(?:([A-Za-z])(?!.*\1))*$/;
 
@@ -109,9 +72,9 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
     	return;
     };
 
-    vm.drawCard = function () {
+    var drawCard = function () {
     	// Load the cards from JSON into card pool
-    	vm.getCardPool.then(function (response) {
+    	getCardPool.then(function (response) {
     		console.log("SUCCESS SERVICE: " + vm.conference);
     		vm.cardPool = response;
 
@@ -165,6 +128,42 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 
     };
 
+	// TODO: This could be moved to a directive
+	var init = function () {
+		console.log("INIT BINGO CONTROLLER");
+		vm.cardPool = [];
+		vm.card = {
+    		"rows": []
+    	};
+
+    	// Check that conference parameter is valid
+    	if (validConferences.indexOf(vm.conference) == -1) {
+    		// TODO: Show conference error message
+    		console.log("conference error");
+			// vm.conference = validConferences[Math.floor(Math.random() * 3)];
+    		return;
+    	}
+    	else {
+			// if (vm.conference == '') {
+			// 	vm.conference = validConferences[Math.floor(Math.random() * 3)];
+			// }
+			// Handle missing route parameters
+			if (vm.cardCode == '') {
+				vm.generateCardCode();
+			}
+			else {
+				readCardCode();
+			};
+
+			if (vm.isCodeValid) {
+				vm.cardLogoUrl = 'images/logo_' + vm.conference + '.png';
+				drawCard();
+			};
+
+			return;
+    	}
+	};
+
     //--- HELPERS
 
 	// vm.getNumber = function(num) {
@@ -180,5 +179,5 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 		this.slots = [];
 	}
 
-	vm.init();
+	init();
 }]);
