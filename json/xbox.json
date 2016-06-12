@@ -1,212 +1,132 @@
 [
 	{
 		"id": "a",
-		"image": "quantum",
-		"text": "Quantum Break no está muerto"
+		"image": "alanwake2",
+		"text": "Alan Wake 2"
 	},
 	{
 		"id": "b",
-		"image": "spark",
-		"text": "Más Project Spark"
+		"image": "battletoads",
+		"text": "Nuevo Battletoads"
 	},
 	{
 		"id": "c",
-		"image": "phil",
-		"text": "Playera de Phil Spencer"
+		"image": "crackdown",
+		"text": "Not Crackdown 3"
 	},
 	{
 		"id": "d",
-		"image": "fable",
-		"text": "Fable Legends"
+		"image": "deadrising4",
+		"text": "Dead Rising 4"
 	},
 	{
 		"id": "e",
-		"image": "crackdown",
-		"text": "Crackdown (no es Crackdown 3)"
+		"image": "exclusives",
+		"text": "Exclusivas robadas"
 	},
 	{
 		"id": "f",
-		"image": "perfect_dark",
-		"text": "Perfect Dark reaparece"
+		"image": "fail",
+		"text": "Stage fail"
 	},
 	{
 		"id": "g",
-		"image": "kinect",
-		"text": "Nada Emocionante de Kinect"
+		"image": "gow4",
+		"text": "Gears of War 4"
 	},
 	{
 		"id": "h",
-		"image": "gold",
-		"text": "Juegos AAA para Gold"
+		"image": "halflife3",
+		"text": "Half-Life 3 Confirmado"
 	},
 	{
 		"id": "i",
-		"image": "slim",
-		"text": "Nuevo Xbox One (Slim/1TB)"
+		"image": "halo6",
+		"text": "Halo 6"
 	},
 	{
 		"id": "j",
-		"image": "windows",
-		"text": "Windows 10"
+		"image": "khtrilogy",
+		"text": "Kingdom Hearts Trilogy"
 	},
 	{
 		"id": "k",
-		"image": "battletoads",
-		"text": "Battletoads Remake / Reboot"
+		"image": "killerinstinct",
+		"text": "KI Season 4"
 	},
 	{
 		"id": "l",
-		"image": "banjo",
-		"text": "Banjo Kazooie (¿Threeie?)"
+		"image": "masseffect",
+		"text": "Mass Effect Andromeda"
 	},
 	{
 		"id": "m",
 		"image": "scalebound",
-		"text": "Más de Scalebound"
+		"text": "Fecha para Scalebound"
 	},
 	{
 		"id": "n",
-		"image": "killer",
-		"text": "KI Season 3"
+		"image": "windows",
+		"text": "Más Windows 10"
 	},
 	{
 		"id": "o",
-		"image": "indies",
-		"text": "¡Montaje de indies!"
+		"image": "meme",
+		"text": "¡Nace un meme!"
 	},
 	{
 		"id": "p",
-		"image": "rock_band",
-		"text": "Rock Band aparece"
+		"image": "vr",
+		"text": "Xbox VR"
 	},
 	{
 		"id": "q",
-		"image": "nueva_ip",
-		"text": "Nueva IP first-party"
+		"image": "pcport",
+		"text": "Ports para PC"
 	},
 	{
 		"id": "r",
-		"image": "gears",
-		"text": "Gears of War Trilogy"
+		"image": "phantomdust",
+		"text": "¡Phantom Dust vive!"
 	},
 	{
 		"id": "s",
-		"image": "mass_effect",
-		"text": "Más Effect (Get it?)"
+		"image": "phil",
+		"text": "Teaser de Phil"
 	},
 	{
 		"id": "t",
-		"image": "below",
-		"text": "Al fin saldrá Below"
+		"image": "price",
+		"text": "Price drop (oficial)"
 	},
 	{
 		"id": "u",
-		"image": "forza_6",
-		"text": "Forza 6"
+		"image": "quake",
+		"text": "Nuevo Quake"
 	},
 	{
 		"id": "v",
-		"image": "rare",
-		"text": "Algo nuevo de Rare"
+		"image": "recore",
+		"text": "Fecha para ReCore"
 	},
 	{
 		"id": "w",
-		"image": "phantom_dust",
-		"text": "Phantom Dust con nuevo developer"
+		"image": "slim",
+		"text": "Xbox One Slim"
 	},
 	{
 		"id": "x",
-		"image": "calientito",
+		"image": "card-logo",
 		"text": "PROLAPSO"
 	},
 	{
 		"id": "y",
-		"image": "gears_4",
-		"text": "Nuevo Gears of War"
+		"image": "sh",
+		"text": "MS salva Silent Hills"
 	},
 	{
 		"id": "z",
-		"image": "guitar",
-		"text": "Guitar Hero aparece"
-	},
-	{
-		"id": "A",
-		"image": "kojima",
-		"text": "Kojima está vivo"
-	},
-	{
-		"id": "B",
-		"image": "silent_hills",
-		"text": "Silent Hills OMG WTF BBQ"
-	},
-	{
-		"id": "C",
-		"image": "fingiendo",
-		"text": "Gente fingiendo jugar"
-	},
-	{
-		"id": "D",
-		"image": "mirrors",
-		"text": "Mirror's Edge"
-	},
-	{
-		"id": "E",
-		"image": "assasins",
-		"text": "Assassin's Creed"
-	},
-	{
-		"id": "F",
-		"image": "mass",
-		"text": "Mass Effect Trilogy HD"
-	},
-	{
-		"id": "G",
-		"image": "tony",
-		"text": "Tony Hawk, con patineta"
-	},
-	{
-		"id": "H",
-		"image": "last_gen",
-		"text": "Nuevo remaster de last-gen"
-	},
-	{
-		"id": "I",
-		"image": "silencio",
-		"text": "Silencio incómodo"
-	},
-	{
-		"id": "J",
-		"image": "meme",
-		"text": "Nace un nuevo meme"
-	},
-	{
-		"id": "K",
-		"image": "download_now",
-		"text": "Juego que puedes descargar YA"
-	},
-	{
-		"id": "L",
-		"image": "gtav",
-		"text": "GTAV DLC con exclusiva temporal"
-	},
-	{
-		"id": "M",
-		"image": "portatil",
-		"text": "Xbox portátil"
-	},
-	{
-		"id": "N",
-		"image": "shenmue3",
-		"text": "Shenmue 3"
-	},
-	{
-		"id": "O",
-		"image": "glitch",
-		"text": "Falla de hardware"
-	},
-	{
-		"id": "P",
-		"image": "minecraft",
-		"text": "Minecraft"
+		"image": "scorpio",
+		"text": "Xbox Scorpio"
 	}
 ]

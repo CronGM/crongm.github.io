@@ -1,212 +1,157 @@
 [
 	{
 		"id": "a",
-		"image": "pilotwings",
-		"text": "Pilotwings Wii U"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "b",
-		"image": "smash_dlc",
-		"text": "Smash Bros DLC"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "c",
-		"image": "pokken",
-		"text": "Pokken Tournament en América"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "d",
-		"image": "f-zero",
-		"text": "No hay nuevo F-Zero"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "e",
-		"image": "mario_kart",
-		"text": "Más DLC de Mario Kart"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "f",
-		"image": "super_metroid",
-		"text": "Super Metroid Remake en 3DS"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "g",
-		"image": "amiibos_problema",
-		"text": "Solucionan el problema de Amiibos"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "h",
-		"image": "devils_third",
-		"text": "Devil's Third de Itagaki"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "i",
-		"image": "dragon_quest",
-		"text": "Dragon Quest VIII"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "j",
-		"image": "miyamoto",
-		"text": "Miyamoto se disfraza"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "k",
-		"image": "animal_crossing",
-		"text": "Animal Crossing Wii U"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "l",
-		"image": "projectxzone",
-		"text": "Project X Zone 2"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "m",
-		"image": "ace_attorney",
-		"text": "The Great Ace Attorney"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "n",
 		"image": "zelda",
-		"text": "Nombre de Zelda Wii U"
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "o",
-		"image": "iwata",
-		"text": "Amiibo de Iwata"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "p",
-		"image": "vitality_sensor",
-		"text": "Otro add-on inútil"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "q",
-		"image": "virtual_console",
-		"text": "VC SNES en 3DS / GCN en Wii U"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "r",
-		"image": "star_fox",
-		"text": "Multiplayer en Star Fox"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "s",
-		"image": "pokemon_stadium",
-		"text": "Pokémon Stadium Wii U"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "t",
-		"image": "mario_sports",
-		"text": "Nuevo juego de deportes de Mario"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "u",
-		"image": "nuevos_amiibos",
-		"text": "Nuevos Amiibos"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "v",
-		"image": "yokai",
-		"text": "Fuerte promoción de Yo-kai Watch"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "w",
-		"image": "shinmegami",
-		"text": "Shin Megami Tensei X Fire Emblem"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "x",
-		"image": "calientito",
+		"image": "card-logo",
 		"text": "PROLAPSO"
 	},
 	{
 		"id": "y",
-		"image": "indies",
-		"text": "¡Montaje de indies!"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "z",
-		"image": "fatal",
-		"text": "Fatal Frame"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "A",
-		"image": "new",
-		"text": "Nueva IP"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "B",
-		"image": "meme",
-		"text": "Nace un nuevo meme"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "C",
-		"image": "bill",
-		"text": "Bill Trinen hace el ridículo"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "D",
-		"image": "precio",
-		"text": "Wii U baja de precio"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	},
 	{
 		"id": "E",
-		"image": "snes",
-		"text": "SNES Remix"
-	},
-	{
-		"id": "F",
-		"image": "nintendoland",
-		"text": "Nintendoland 2"
-	},
-	{
-		"id": "G",
-		"image": "3ds",
-		"text": "New 3DS edición especial"
-	},
-	{
-		"id": "H",
-		"image": "doug",
-		"text": "Doug Bowser aparece"
-	},
-	{
-		"id": "I",
-		"image": "bajaya",
-		"text": "Juego que puedes descargar YA"
-	},
-	{
-		"id": "J",
-		"image": "freetoplay",
-		"text": "Nuevo juego F2P"
-	},
-	{
-		"id": "K",
-		"image": "remaster",
-		"text": "Nuevo remaster de last-gen"
-	},
-	{
-		"id": "L",
-		"image": "reggie",
-		"text": "Amiibo de Reggie"
-	},
-	{
-		"id": "M",
-		"image": "xenoblade",
-		"text": "Fecha de Xenoblade Chronicles X"
-	},
-	{
-		"id": "N",
-		"image": "snap",
-		"text": "Pokémon Snap"
-	},
-	{
-		"id": "O",
-		"image": "retro",
-		"text": "Nuevo juego de Retro"
-	},
-	{
-		"id": "P",
-		"image": "reggie",
-		"text": "Amiibo de Reggie"
+		"image": "zelda",
+		"text": "Zelda Wii U gameplay"
 	}
 ]

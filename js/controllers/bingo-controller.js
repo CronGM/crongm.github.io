@@ -10,9 +10,9 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 
 	// TODO: Implement for easy modification/localization
 	vm.schedules = {
-		"nintendo": 'Lunes 16 de Junio, 11:00 AM',
-		"playstation": 'Lunes 15 de Junio, 8:00 PM',
-		"xbox": 'Lunes 15 de Junio, 11:30 AM'
+		"nintendo": 'Martes 14 de Junio, 02:00 PM',
+		"playstation": 'Lunes 13 de Junio, 8:00 PM',
+		"xbox": 'Lunes 13 de Junio, 11:30 AM'
 	};
 
 	vm.conference = $routeParams.conference || '';
@@ -23,7 +23,8 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 	vm.cardPool = [];
 
     vm.generateCardCode = function () {
-    	var chars="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOP";
+    	// var chars="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOP";
+    	var chars="abcdefghijklmnopqrstuvwyz";
     	var indexOut = 0;
     	for (var i = 0; i < 24; i++) {
     		indexOut = Math.floor(Math.random() * chars.length);

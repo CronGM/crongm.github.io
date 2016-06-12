@@ -1,207 +1,132 @@
 [
 	{
 		"id": "a",
-		"image": "playstation",
-		"text": "playstation"
+		"image": "crash",
+		"text": "¡Crash vive!"
 	},
 	{
 		"id": "b",
-		"image": "",
-		"text": ""
+		"image": "dmc5",
+		"text": "Devil May Cry 5"
 	},
 	{
 		"id": "c",
-		"image": "",
-		"text": ""
+		"image": "fail",
+		"text": "Stage Fail"
 	},
 	{
 		"id": "d",
-		"image": "",
-		"text": ""
+		"image": "ff7",
+		"text": "FF VII Remake"
 	},
 	{
 		"id": "e",
-		"image": "",
-		"text": ""
+		"image": "gow4",
+		"text": "God of War 4"
 	},
 	{
 		"id": "f",
-		"image": "",
-		"text": ""
+		"image": "halflife3",
+		"text": "Half-Life 3 Confirmado"
 	},
 	{
 		"id": "g",
-		"image": "",
-		"text": ""
+		"image": "khtrilogy",
+		"text": "Kingdom Hearts Trilogy"
 	},
 	{
 		"id": "h",
-		"image": "",
-		"text": ""
+		"image": "knack2",
+		"text": "Knack 2"
 	},
 	{
 		"id": "i",
-		"image": "",
-		"text": ""
+		"image": "kojipro",
+		"text": "Juego de Kojima Productions"
 	},
 	{
 		"id": "j",
-		"image": "",
-		"text": ""
+		"image": "meme",
+		"text": "¡Nace un meme!"
 	},
 	{
 		"id": "k",
-		"image": "",
-		"text": ""
+		"image": "price",
+		"text": "Price drop oficial"
 	},
 	{
 		"id": "l",
-		"image": "",
-		"text": ""
+		"image": "ps4k",
+		"text": "Siempre sí PS4K"
 	},
 	{
 		"id": "m",
-		"image": "",
-		"text": ""
+		"image": "psvr",
+		"text": "Reel PlayStation VR"
 	},
 	{
 		"id": "n",
-		"image": "",
-		"text": ""
+		"image": "rdr",
+		"text": "Red Dead Algo"
 	},
 	{
 		"id": "o",
-		"image": "",
-		"text": ""
+		"image": "re7",
+		"text": "Resident Evil 7"
 	},
 	{
 		"id": "p",
-		"image": "",
-		"text": ""
+		"image": "rotr",
+		"text": "Rise of the Tomb Raider DE"
 	},
 	{
 		"id": "q",
-		"image": "",
-		"text": ""
+		"image": "sh",
+		"text": "Sony salva Silent Hills"
 	},
 	{
 		"id": "r",
-		"image": "",
-		"text": ""
+		"image": "shawn",
+		"text": "Teaser de Shawn"
 	},
 	{
 		"id": "s",
-		"image": "",
-		"text": ""
+		"image": "shenmue",
+		"text": "The Ryo Hazuki Collection"
 	},
 	{
 		"id": "t",
-		"image": "",
-		"text": ""
+		"image": "vita",
+		"text": "RIP PS Vita"
 	},
 	{
 		"id": "u",
-		"image": "",
-		"text": ""
+		"image": "shenmue3",
+		"text": "Shenmue III"
 	},
 	{
 		"id": "v",
-		"image": "",
-		"text": ""
+		"image": "spiderman",
+		"text": "Spider-Man por Sucker Punch"
 	},
 	{
 		"id": "w",
-		"image": "",
-		"text": ""
+		"image": "titanfall2",
+		"text": "Titanfall 2 burn"
+	},
+	{
+		"id": "x",
+		"image": "card-logo",
+		"text": "PROLAPSO"
 	},
 	{
 		"id": "y",
-		"image": "",
-		"text": ""
+		"image": "tlg",
+		"text": "The Last Guardian"
 	},
 	{
 		"id": "z",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "A",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "B",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "C",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "D",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "E",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "F",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "G",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "H",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "I",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "J",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "K",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "L",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "M",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "N",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "O",
-		"image": "",
-		"text": ""
-	},
-	{
-		"id": "P",
-		"image": "",
-		"text": ""
+		"image": "tlou2",
+		"text": "The Last of Us 2"
 	}
 ]
