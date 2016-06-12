@@ -16,15 +16,13 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 	};
 
 	vm.conference = $routeParams.conference || '';
-	vm.cardCode = $routeParams.cardCode || '';
-	vm.isSharedCode = $routeParams.shared || false;
+	vm.cardCode = localStorageService.get(vm.conference) || '';
 	vm.isCodeValid = false;
 	vm.urlHost = $location.host();
 
 	vm.cardPool = [];
 
     vm.generateCardCode = function () {
-    	vm.cardCode = "";
     	var chars="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOP";
     	var indexOut = 0;
     	for (var i = 0; i < 24; i++) {
@@ -144,15 +142,20 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
     		return;
     	}
     	else {
+			if ($routeParams.shared) {
+				vm.isSharedCode = $routeParams.shared;
+				vm.cardCode = $routeParams.cardCode;
+			}
+
 			// if (vm.conference == '') {
 			// 	vm.conference = validConferences[Math.floor(Math.random() * 3)];
 			// }
 			// Handle missing route parameters
-			if (vm.cardCode == '') {
-				vm.generateCardCode();
+			if (vm.cardCode) {
+				readCardCode();
 			}
 			else {
-				readCardCode();
+				vm.generateCardCode();
 			};
 
 			if (vm.isCodeValid) {

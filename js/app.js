@@ -21,11 +21,6 @@ app.config(['$routeProvider', function ($routeProvider) {
 		controllerAs: 'vm',
 		templateUrl: 'views/bingo.html'
 	})
-	.when('/bingo/:conference/:cardCode', {
-		controller: 'BingoController',
-		controllerAs: 'vm',
-		templateUrl: 'views/bingo.html'
-	})
 	.when('/bingo/:conference/:cardCode/:shared', {
 		controller: 'BingoController',
 		controllerAs: 'vm',
