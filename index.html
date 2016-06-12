@@ -32,7 +32,7 @@
 						</a>
 					</header>
 
-					<nav id="js-navbar-collapse" class="collapse navbar-collapse" ng-controller="TopNavController as link">
+					<nav id="js-navbar-collapse" class="collapse navbar-collapse" data-toggle="collapse" data-target="#js-navbar-collapse.collapse.in" ng-controller="TopNavController as link">
 						<ul class="nav navbar-nav navbar-right">
 							<li ng-class="{ active: link.isActive('/bingo') }"><a href="#/bingo">Inicio</a></li>
 							<li ng-class="{ active: link.isActive('/rules') }"><a href="#/rules">Reglas</a></li>
