@@ -20,9 +20,5 @@ app.controller('MainController', ['$scope', '$routeParams', 'localStorageService
 		return;
 	};
 
-	vm.dismissTermsAlert = function () {
-		localStorageService.set('hideTerms', true);
-	}
-
 	vm.init();
 }]);

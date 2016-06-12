@@ -8,6 +8,9 @@ main ol {
 .navbar {
   border-radius: 0;
 }
+.navbar a {
+  cursor: pointer;
+}
 .navbar-brand {
   padding-bottom: 3px;
   padding-top: 3px;
