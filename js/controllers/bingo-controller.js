@@ -10,9 +10,9 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 
 	// TODO: Implement for easy modification/localization
 	vm.schedules = {
-		"nintendo": 'Martes 14 de Junio, 02:00 PM',
-		"playstation": 'Lunes 13 de Junio, 8:00 PM',
-		"xbox": 'Lunes 13 de Junio, 11:30 AM'
+		"nintendo": 'Martes 13 de Junio, 11:00 AM (MX)',
+		"playstation": 'Lunes 12 de Junio, 8:00 PM (MX)',
+		"xbox": 'Lunes 11 de Junio, 04:00 PM (MX)'
 	};
 
 	vm.conference = $routeParams.conference || '';
