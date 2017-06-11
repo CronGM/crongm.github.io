@@ -1,118 +1,118 @@
 [
 	{
 		"id": "a",
-		"image": "crash",
-		"text": "¡Crash vive!"
+		"image": "ape",
+		"text": "Ape Escape Revival"
 	},
 	{
 		"id": "b",
-		"image": "dmc5",
-		"text": "Devil May Cry 5"
+		"image": "ctr",
+		"text": "Crash Team Racing HD"
 	},
 	{
 		"id": "c",
-		"image": "fail",
-		"text": "Stage Fail"
+		"image": "daysgone",
+		"text": "Days Gone Dated"
 	},
 	{
 		"id": "d",
-		"image": "ff7",
-		"text": "FF VII Remake"
+		"image": "dmc",
+		"text": "Devil May Cry 5"
 	},
 	{
 		"id": "e",
-		"image": "gow4",
-		"text": "God of War 4"
+		"image": "dreams",
+		"text": "Dreams Lives!"
 	},
 	{
 		"id": "f",
-		"image": "halflife3",
-		"text": "Half-Life 3 Confirmado"
+		"image": "ffremake",
+		"text": "FF VII Remake Trailer"
 	},
 	{
 		"id": "g",
-		"image": "khtrilogy",
-		"text": "Kingdom Hearts Trilogy"
+		"image": "gow",
+		"text": "God of War Dated"
 	},
 	{
 		"id": "h",
-		"image": "knack2",
-		"text": "Knack 2"
+		"image": "gt",
+		"text": "GT Sport Trailer"
 	},
 	{
 		"id": "i",
-		"image": "kojipro",
-		"text": "Juego de Kojima Productions"
+		"image": "knack",
+		"text": "Actually Looks Good"
 	},
 	{
 		"id": "j",
-		"image": "meme",
-		"text": "¡Nace un meme!"
+		"image": "lbp",
+		"text": "Little Big Planet 4"
 	},
 	{
 		"id": "k",
-		"image": "price",
-		"text": "Price drop oficial"
+		"image": "platinum",
+		"text": "New Platinum Game"
 	},
 	{
 		"id": "l",
-		"image": "ps4k",
-		"text": "Siempre sí PS4K"
+		"image": "price",
+		"text": "PS4 Pro Price Drop"
 	},
 	{
 		"id": "m",
-		"image": "psvr",
-		"text": "Reel PlayStation VR"
+		"image": "prompto",
+		"text": "Episode Prompto"
 	},
 	{
 		"id": "n",
-		"image": "rdr",
-		"text": "Red Dead Algo"
+		"image": "rap",
+		"text": "Sony Saves the Day"
 	},
 	{
 		"id": "o",
-		"image": "re7",
-		"text": "Resident Evil 7"
+		"image": "rdr2",
+		"text": "New RDR2 Trailer"
 	},
 	{
 		"id": "p",
-		"image": "rotr",
-		"text": "Rise of the Tomb Raider DE"
+		"image": "royale",
+		"text": "Unwanted Sequels"
 	},
 	{
 		"id": "q",
-		"image": "sh",
-		"text": "Sony salva Silent Hills"
+		"image": "shawn",
+		"text": "Shawn Shirt Teaser"
 	},
 	{
 		"id": "r",
-		"image": "shawn",
-		"text": "Teaser de Shawn"
+		"image": "shenmue",
+		"text": "Shenmue HD"
 	},
 	{
 		"id": "s",
-		"image": "shenmue",
-		"text": "The Ryo Hazuki Collection"
+		"image": "sly",
+		"text": "Sly Cooper Revival"
 	},
 	{
 		"id": "t",
-		"image": "vita",
-		"text": "RIP PS Vita"
+		"image": "spiderman",
+		"text": "Spider-Man Trailer"
 	},
 	{
 		"id": "u",
-		"image": "shenmue3",
-		"text": "Shenmue III"
+		"image": "spyro",
+		"text": "Spyro Trilogy"
 	},
 	{
 		"id": "v",
-		"image": "spiderman",
-		"text": "Spider-Man por Sucker Punch"
+		"image": "stranding",
+		"text": "Kojima cocktease"
 	},
 	{
 		"id": "w",
-		"image": "titanfall2",
-		"text": "Titanfall 2 burn"
+		"image": "tlou",
+		"text": "Joel is Deeeeead"
 	},
 	{
 		"id": "x",
@@ -121,12 +121,12 @@
 	},
 	{
 		"id": "y",
-		"image": "tlg",
-		"text": "The Last Guardian"
+		"image": "vr",
+		"text": "Exciting VR Game"
 	},
 	{
 		"id": "z",
-		"image": "tlou2",
-		"text": "The Last of Us 2"
+		"image": "vita2",
+		"text": "PS Vita 2 Announced"
 	}
 ]

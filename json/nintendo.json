@@ -1,118 +1,118 @@
 [
 	{
 		"id": "a",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "amiibo",
+		"text": "More Amiibos"
 	},
 	{
 		"id": "b",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "anicro",
+		"text": "New Animal Crossing"
 	},
 	{
 		"id": "c",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "castlevania",
+		"text": "New Castlevania"
 	},
 	{
 		"id": "d",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "cube",
+		"text": "Gamecube VC"
 	},
 	{
 		"id": "e",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "deluxe",
+		"text": "Everything Deluxe"
 	},
 	{
 		"id": "f",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "fzero",
+		"text": "F-Zero Revival"
 	},
 	{
 		"id": "g",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "icarus",
+		"text": "Kid Icarus is Back"
 	},
 	{
 		"id": "h",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "kirby",
+		"text": "Kirby City Trial 3DS"
 	},
 	{
 		"id": "i",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "mario",
+		"text": "GotY Material"
 	},
 	{
 		"id": "j",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "megaman",
+		"text": "Mega Man on Switch"
 	},
 	{
 		"id": "k",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "megaten",
+		"text": "MeGaTen Megaton"
 	},
 	{
 		"id": "l",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "metroid",
+		"text": "New Metroid (2D Plz)"
 	},
 	{
 		"id": "m",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "new",
+		"text": "New 1st-party IP"
 	},
 	{
 		"id": "n",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "pikmin",
+		"text": "Pikmin 4"
 	},
 	{
 		"id": "o",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "pokemon",
+		"text": "Pokémon for Switch"
 	},
 	{
 		"id": "p",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "rabbids",
+		"text": "Actually Looks Good"
 	},
 	{
 		"id": "q",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "retro",
+		"text": "New Retro Studios Game"
 	},
 	{
 		"id": "r",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "revival",
+		"text": "Old IP Revival"
 	},
 	{
 		"id": "s",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "sakurai",
+		"text": "New Sakurai Game"
 	},
 	{
 		"id": "t",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "sanic",
+		"text": "Sonic on Switch"
 	},
 	{
 		"id": "u",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "smash",
+		"text": "Smash Bros. Switch"
 	},
 	{
 		"id": "v",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "unwanted",
+		"text": "Unwanted Sequels"
 	},
 	{
 		"id": "w",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "xenoblade",
+		"text": "Xenoblade 2 Dated"
 	},
 	{
 		"id": "x",
@@ -122,36 +122,11 @@
 	{
 		"id": "y",
 		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"text": "Zelda BotW DLC"
 	},
 	{
 		"id": "z",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
-	},
-	{
-		"id": "A",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
-	},
-	{
-		"id": "B",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
-	},
-	{
-		"id": "C",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
-	},
-	{
-		"id": "D",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
-	},
-	{
-		"id": "E",
-		"image": "zelda",
-		"text": "Zelda Wii U gameplay"
+		"image": "yookalaylee",
+		"text": "Have You Seen Me?"
 	}
 ]

@@ -1,118 +1,118 @@
 [
 	{
 		"id": "a",
-		"image": "alanwake2",
-		"text": "Alan Wake 2"
+		"image": "399",
+		"text": "Scorpio Nice Price"
 	},
 	{
 		"id": "b",
-		"image": "battletoads",
-		"text": "Nuevo Battletoads"
+		"image": "499",
+		"text": "Scorpio Overpriced"
 	},
 	{
 		"id": "c",
-		"image": "crackdown",
-		"text": "Not Crackdown 3"
+		"image": "awake",
+		"text": "Alan Wake 2"
 	},
 	{
 		"id": "d",
-		"image": "deadrising4",
-		"text": "Dead Rising 4"
+		"image": "battletoads",
+		"text": "New Battletoads"
 	},
 	{
 		"id": "e",
-		"image": "exclusives",
-		"text": "Exclusivas robadas"
+		"image": "blinx",
+		"text": "Blinx Revival"
 	},
 	{
 		"id": "f",
-		"image": "fail",
-		"text": "Stage fail"
+		"image": "crackdown",
+		"text": "Crackdown MIA"
 	},
 	{
 		"id": "g",
-		"image": "gow4",
-		"text": "Gears of War 4"
+		"image": "cuphead",
+		"text": "Cuphead Dated"
 	},
 	{
 		"id": "h",
-		"image": "halflife3",
-		"text": "Half-Life 3 Confirmado"
+		"image": "destiny",
+		"text": "Destiny 2 on Stage"
 	},
 	{
 		"id": "i",
-		"image": "halo6",
-		"text": "Halo 6"
+		"image": "forza",
+		"text": "Forza 7"
 	},
 	{
 		"id": "j",
-		"image": "khtrilogy",
-		"text": "Kingdom Hearts Trilogy"
+		"image": "halo",
+		"text": "Halo Spin-off"
 	},
 	{
 		"id": "k",
-		"image": "killerinstinct",
-		"text": "KI Season 4"
+		"image": "hl3",
+		"text": "HL3 on Scorpio"
 	},
 	{
 		"id": "l",
-		"image": "masseffect",
-		"text": "Mass Effect Andromeda"
+		"image": "ki",
+		"text": "New Season"
 	},
 	{
 		"id": "m",
-		"image": "scalebound",
-		"text": "Fecha para Scalebound"
+		"image": "mgs",
+		"text": "Konami is Not Dead"
 	},
 	{
 		"id": "n",
-		"image": "windows",
-		"text": "Más Windows 10"
+		"image": "mistwalker",
+		"text": "Mistwalker is Back!"
 	},
 	{
 		"id": "o",
-		"image": "meme",
-		"text": "¡Nace un meme!"
+		"image": "mvc",
+		"text": "MvC Infinite"
 	},
 	{
 		"id": "p",
-		"image": "vr",
-		"text": "Xbox VR"
+		"image": "perfect",
+		"text": "Old Rare IP Revival"
 	},
 	{
 		"id": "q",
-		"image": "pcport",
-		"text": "Ports para PC"
+		"image": "pricedrop",
+		"text": "Xbox One S Pricedrop"
 	},
 	{
 		"id": "r",
-		"image": "phantomdust",
-		"text": "¡Phantom Dust vive!"
+		"image": "scalebound",
+		"text": "It's Alive!"
 	},
 	{
 		"id": "s",
-		"image": "phil",
-		"text": "Teaser de Phil"
+		"image": "scorpio",
+		"text": "It IS a New Console"
 	},
 	{
 		"id": "t",
-		"image": "price",
-		"text": "Price drop (oficial)"
+		"image": "sea",
+		"text": "Actually Looks Good"
 	},
 	{
 		"id": "u",
-		"image": "quake",
-		"text": "Nuevo Quake"
+		"image": "sequels",
+		"text": "Unwanted Sequels"
 	},
 	{
 		"id": "v",
-		"image": "recore",
-		"text": "Fecha para ReCore"
+		"image": "sonic",
+		"text": "Sonic Forces"
 	},
 	{
 		"id": "w",
-		"image": "slim",
-		"text": "Xbox One Slim"
+		"image": "timed",
+		"text": "Timed Exclusives"
 	},
 	{
 		"id": "x",
@@ -121,12 +121,12 @@
 	},
 	{
 		"id": "y",
-		"image": "sh",
-		"text": "MS salva Silent Hills"
+		"image": "vr",
+		"text": "Mixed Reality"
 	},
 	{
 		"id": "z",
-		"image": "scorpio",
-		"text": "Xbox Scorpio"
+		"image": "windows",
+		"text": "Windows on Xbox"
 	}
 ]
