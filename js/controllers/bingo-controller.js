@@ -2,7 +2,7 @@
 
 app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStorageService', '$location', function ($scope, $routeParams, cards, localStorageService, $location) {
 	var vm = this;
-	var validConferences = ['nintendo', 'playstation', 'xbox'];
+	var validConferences = ['nintendo', 'playstation', 'xbox', 'got'];
 	var getCardPool = cards.getPool($routeParams);
 
 	// Enable debug UI
@@ -10,6 +10,7 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 
 	// TODO: Implement for easy modification/localization
 	vm.schedules = {
+		"got": 'Martes 15 de Abril, 08:00 PM (MX)',
 		"nintendo": 'Martes 13 de Junio, 11:00 AM (MX)',
 		"playstation": 'Lunes 12 de Junio, 8:00 PM (MX)',
 		"xbox": 'Domingo 11 de Junio, 04:00 PM (MX)'
@@ -24,7 +25,7 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 
     vm.generateCardCode = function () {
     	// var chars="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOP";
-    	var chars="abcdefghijklmnopqrstuvwyz";
+    	var chars="abcdefghijklmnopqrstuvwyzABCDE";
     	var indexOut = 0;
     	for (var i = 0; i < 24; i++) {
     		indexOut = Math.floor(Math.random() * chars.length);

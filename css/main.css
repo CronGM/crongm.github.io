@@ -94,6 +94,12 @@ main ol {
 .nintendo .table-cell.checked:after {
   background: #d01a19;
 }
+.got {
+  background: #808080;
+}
+.got .table-cell.checked:after {
+  background: #808080;
+}
 .playstation {
   background: #0661b2;
 }
@@ -105,6 +111,7 @@ main ol {
   text-align: center;
   padding: 30px 20px;
   height: 100px;
+  margin-bottom: 0.1em;
 }
 .bingo-link img {
   margin: 0 auto;
@@ -169,6 +176,12 @@ main ol {
   top: 50%;
   left: 50%;
 }
+.no-margin {
+  margin: 0;
+}
+.text-smallest {
+  font-size: 12px;
+}
 @media screen and (max-width: 639px) {
   .slot {
     min-height: 94px;
@@ -185,6 +198,10 @@ main ol {
   .table-cell.checked:after {
     font-size: 2.5em;
   }
+}
+.navbar-brand img {
+  max-width: 200px;
+  height: auto;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   html {

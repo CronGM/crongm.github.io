@@ -6,6 +6,7 @@ $mobile_only = 'screen and (max-width 639px)'
 $xbox = #107C10
 $nintendo = #D01A19
 $playstation = #0661B2
+$got = gray
 
 body
     > .container
@@ -109,6 +110,13 @@ main
             &:after
                 background $nintendo
 
+.got
+    background $got
+    .table-cell
+        &.checked
+            &:after
+                background $got
+
 .playstation
     background $playstation
     .table-cell
@@ -121,6 +129,7 @@ main
 	text-align center
 	padding 30px 20px
 	height 100px
+	margin-bottom 0.1em
 
 .bingo-link img
     margin 0 auto
@@ -186,6 +195,15 @@ main
             position absolute
             top 50%
             left 50%
+
+// Utility Classes
+.no-margin
+    margin 0
+
+.text-smallest
+	font-size 12px
+
+// Media Queries
             
 @media $mobile_only
     .slot
@@ -204,6 +222,11 @@ main
         &.checked
             &:after
                 font-size 2.5em
+
+	.navbar-brand
+		img
+			max-width 200px
+			height auto
 
 // Fix 1px transparent border on Chrome. Still present above and below images
 @media screen and (-webkit-min-device-pixel-ratio:0)

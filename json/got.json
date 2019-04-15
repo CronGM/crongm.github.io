@@ -1,0 +1,157 @@
+[
+	{
+		"id": "a",
+		"image": "jon",
+		"text": "Jon Snow (Again)"
+	},
+	{
+		"id": "b",
+		"image": "arya",
+		"text": "Arya Stark"
+	},
+	{
+		"id": "c",
+		"image": "sansa",
+		"text": "Sansa Stark"
+	},
+	{
+		"id": "d",
+		"image": "bran",
+		"text": "Bran Stark"
+	},
+	{
+		"id": "e",
+		"image": "cersei",
+		"text": "Cersei Lannister"
+	},
+	{
+		"id": "f",
+		"image": "jaime",
+		"text": "Jaime Lannister"
+	},
+	{
+		"id": "g",
+		"image": "tyrion",
+		"text": "Tyrion Lannister"
+	},
+	{
+		"id": "h",
+		"image": "daenerys",
+		"text": "Daenerys Targaryen"
+	},
+	{
+		"id": "i",
+		"image": "yara",
+		"text": "Yara Greyjoy"
+	},
+	{
+		"id": "j",
+		"image": "theon",
+		"text": "Theon Greyjoy"
+	},
+	{
+		"id": "k",
+		"image": "melisandre",
+		"text": "Melisandre"
+	},
+	{
+		"id": "l",
+		"image": "jorah",
+		"text": "Jorah Mormont"
+	},
+	{
+		"id": "m",
+		"image": "hound",
+		"text": "The Hound"
+	},
+	{
+		"id": "n",
+		"image": "mountain",
+		"text": "The Mountain (Again)"
+	},
+	{
+		"id": "o",
+		"image": "sam",
+		"text": "Samwell Tarly"
+	},
+	{
+		"id": "p",
+		"image": "gilly",
+		"text": "Gilly"
+	},
+	{
+		"id": "q",
+		"image": "varys",
+		"text": "Varys"
+	},
+	{
+		"id": "r",
+		"image": "brienne",
+		"text": "Brienne of Tarth"
+	},
+	{
+		"id": "s",
+		"image": "davos",
+		"text": "Davos Seaworth"
+	},
+	{
+		"id": "t",
+		"image": "bronn",
+		"text": "Bronn"
+	},
+	{
+		"id": "u",
+		"image": "podrick",
+		"text": "Podrick Payne"
+	},
+	{
+		"id": "v",
+		"image": "tormund",
+		"text": "Tormund Giantsbane"
+	},
+	{
+		"id": "w",
+		"image": "greyworm",
+		"text": "Grey Worm"
+	},
+	{
+		"id": "x",
+		"image": "king",
+		"text": "The Night King"
+	},
+	{
+		"id": "y",
+		"image": "gendry",
+		"text": "Gendry"
+	},
+	{
+		"id": "z",
+		"image": "beric",
+		"text": "Beric Dondarrion"
+	},
+	{
+		"id": "A",
+		"image": "euron",
+		"text": "Euron Greyjoy"
+	},
+	{
+		"id": "B",
+		"image": "missandei",
+		"text": "Missandei"
+	},
+	{
+		"id": "C",
+		"image": "drogon",
+		"text": "Drogon"
+	},
+	{
+		"id": "D",
+		"image": "rhaegal",
+		"text": "Rhaegal"
+	},
+	{
+		"id": "E",
+		"image": "viserion",
+		"text": "Viserion (Again)"
+	}
+]

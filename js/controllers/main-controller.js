@@ -13,10 +13,12 @@ app.controller('MainController', ['$scope', '$routeParams', 'localStorageService
         var localNintendoCard = localStorageService.get('nintendo');
         var localPlaystationCard = localStorageService.get('playstation');
         var localXboxCard = localStorageService.get('xbox');
+        var localGotCard = localStorageService.get('got');
 
         vm.nintendoCardCode = localNintendoCard || '';
         vm.playstationCardCode = localPlaystationCard || '';
         vm.xboxCardCode = localXboxCard || '';
+        vm.gotCardCode = localGotCard || '';
 		return;
 	};
 
