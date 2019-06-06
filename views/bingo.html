@@ -11,8 +11,8 @@
 		<p>Card Pool:</p>
 		<textarea>{{ vm.cardPool | json }}</textarea>
 		<p>Card:</p>
-		<textarea>{{ vm.card | json }}</textarea>
-		<p>Card Item 0: {{ vm.card[0].id }} {{ vm.card[0].imageUrl }} {{ vm.card[0].message }}</p>
+		<textarea>{{ vm.myCard | json }}</textarea>
+		<p>Card Item 0: {{ vm.myCard[0].id }} | {{ vm.myCard[0].image }} | {{ vm.myCard[0].text }}</p>
 		<button class="btn btn-default" ng-click="vm.generateCardCode()">GENERATE CARD</button>
 	</div>
 
@@ -26,19 +26,12 @@
 				<img id="card-header-logo" ng-src="{{ vm.cardLogoUrl }}">
 				<h1 class="sr-only">{{ vm.conference }}</h1>
 			</header>
-			<!--<div class="clearfix card-row" ng-repeat="row in vm.card.rows track by $index">
-				<div class="col-xs-2 slot" ng-repeat="slot in vm.card.rows[$index].slots track by $index">
-					<img ng-src="images/{{ vm.conference }}/{{ slot.image }}.jpg" class="img-responsive">
-					<p>{{ slot.text }}</p>
-				</div>
-			</div>-->
+			
 			<div class="grid">
-				<div class="table-row" ng-repeat="row in vm.card.rows track by $index">
-					<card-cell class="table-cell" ng-repeat="slot in vm.card.rows[$index].slots track by $index">
-						<img ng-src="images/{{ vm.conference }}/{{ slot.image }}.jpg">
-						<div>{{ slot.text }}</div>
-					</card-cell>
-				</div>
+				<card-cell class="grid-cell" ng-repeat="cell in vm.myCard">
+					<img ng-src="images/{{ vm.conference }}/{{ cell.image }}.jpg">
+					<div>{{ cell.text }}</div>
+				</card-cell>
 			</div>
 		</div>
 		<div id="share-area" class="text-center" ng-if="!vm.isSharedCode">

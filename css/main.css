@@ -85,25 +85,25 @@ main ol {
 .xbox {
   background: #107c10;
 }
-.xbox .table-cell.checked:after {
+.xbox .grid-cell.checked:after {
   background: #107c10;
 }
 .nintendo {
   background: #d01a19;
 }
-.nintendo .table-cell.checked:after {
+.nintendo .grid-cell.checked:after {
   background: #d01a19;
 }
 .got {
   background: #808080;
 }
-.got .table-cell.checked:after {
+.got .grid-cell.checked:after {
   background: #808080;
 }
 .playstation {
   background: #0661b2;
 }
-.playstation .table-cell.checked:after {
+.playstation .grid-cell.checked:after {
   background: #0661b2;
 }
 .bingo-link {
@@ -121,27 +121,23 @@ main ol {
   margin: 0.1em 0 1em;
 }
 .grid {
-  display: table;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
-.table-row {
-  display: table-row;
-}
-.table-cell {
+.grid-cell {
   cursor: pointer;
-  display: table-cell;
   border: 1px solid #000;
-  width: 20%;
-  max-width: 20%;
   overflow: hidden;
   position: relative;
   text-overflow: ellipsis;
+  flex-basis: 20%;
 }
-.table-cell img {
+.grid-cell img {
   max-width: 100%;
   border-bottom: 2px solid #000;
 }
-.table-cell div {
+.grid-cell div {
   padding: 0.5em 0.5em;
   color: #fff;
   text-align: center;
@@ -149,7 +145,7 @@ main ol {
   line-height: 1em;
   margin: 0;
 }
-.table-cell.checked:before {
+.grid-cell.checked:before {
   background: #fff;
   content: "";
   display: block;
@@ -160,7 +156,7 @@ main ol {
   right: 0;
   bottom: 0;
 }
-.table-cell.checked:after {
+.grid-cell.checked:after {
   border-radius: 50%;
   color: #fff;
   content: "\e800";
@@ -176,7 +172,7 @@ main ol {
   top: 50%;
   left: 50%;
 }
-.got .table-cell.checked:after {
+.got .grid-cell.checked:after {
   background: #c00;
   content: "☠️";
   font-weight: 400;
@@ -196,11 +192,11 @@ main ol {
     line-height: 1.1em;
     min-height: 25px;
   }
-  .table-cell div {
+  .grid-cell div {
     font-size: 9px;
     line-height: 1.1em;
   }
-  .table-cell.checked:after {
+  .grid-cell.checked:after {
     font-size: 2.5em;
   }
 }

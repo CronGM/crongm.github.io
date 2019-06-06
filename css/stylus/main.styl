@@ -98,28 +98,28 @@ main
 
 .xbox
     background $xbox
-    .table-cell
+    .grid-cell
         &.checked
             &:after
                 background $xbox
 
 .nintendo
     background $nintendo
-    .table-cell
+    .grid-cell
         &.checked
             &:after
                 background $nintendo
 
 .got
     background $got
-    .table-cell
+    .grid-cell
         &.checked
             &:after
                 background $got
 
 .playstation
     background $playstation
-    .table-cell
+    .grid-cell
         &.checked
             &:after
                 background $playstation
@@ -140,21 +140,17 @@ main
 	margin 0.1em 0 1em
 
 .grid
-	display table
-	width 100%
+    display flex
+    flex-wrap wrap
+    width 100%
 
-.table-row
-	display table-row
-
-.table-cell
+.grid-cell
     cursor pointer
-    display table-cell
     border 1px solid black
-    width 20%
-    max-width 20%
     overflow hidden
     position relative
     text-overflow ellipsis
+    flex-basis 20%
     
     img
         max-width 100%
@@ -219,7 +215,7 @@ main
         line-height 1.1em
         min-height 25px
 
-    .table-cell
+    .grid-cell
         div
             font-size 9px
             line-height 1.1em

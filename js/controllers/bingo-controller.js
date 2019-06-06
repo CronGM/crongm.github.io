@@ -20,152 +20,120 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 	vm.cardCode = localStorageService.get(vm.conference) || '';
 	vm.isCodeValid = false;
 	vm.urlHost = $location.host();
+	// vm.cardGrid = localStorageService.get('cardGrid') || new Array(25);
 
 	vm.cardPool = [];
 
-    vm.generateCardCode = function () {
-    	// var chars="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOP";
-    	var chars="abcdefghijklmnopqrstuvwyzABCDE";
-    	var indexOut = 0;
-    	for (var i = 0; i < 24; i++) {
-    		indexOut = Math.floor(Math.random() * chars.length);
-    		vm.cardCode += chars[indexOut];
-    		chars = strSplice(chars, indexOut, 1);
-    	};
+	vm.generateCardCode = function () {
+		// var chars="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOP";
+		var chars="abcdefghijklmnopqrstuvwyz";
+		var indexOut = 0;
+		vm.cardCode = '';
 
-    	// Save to local storage
-    	localStorageService.set(vm.conference, vm.cardCode);
-		vm.shareCode = vm.cardCode;
-    	vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
+		for (var i = 0; i < 24; i++) {
+			indexOut = Math.floor(Math.random() * chars.length);
+			vm.cardCode += chars[indexOut];
+			chars = strSplice(chars, indexOut, 1);
+		};
 
-    	vm.isCodeValid = true;
+		// Save to local storage
+		localStorageService.set(vm.conference, vm.cardCode);
+	vm.shareCode = vm.cardCode;
+		vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
 
-    	return;
-    };
+		vm.isCodeValid = true;
 
-    var readCardCode = function () {
-		// Checks that no card is repeated
-    	var codePattern = /^(?:([A-Za-z])(?!.*\1))*$/;
+		return;
+	};
 
-    	// If valid conference, check that code has exactly 24 characters
-    	// If not, generate valid code
-    	if (vm.cardCode.length != 24) {
-    		// TODO: Show cardCode error message
-    		console.log("length error");
+	var readCardCode = function () {
+	// Checks that no card is repeated
+		var codePattern = /^(?:([A-Za-z])(?!.*\1))*$/;
+
+		// If valid conference, check that code has exactly 24 characters
+		// If not, generate valid code
+		if (vm.cardCode.length != 24) {
+			// TODO: Show cardCode error message
+			console.log("length error");
+		return;
+		}
+		
+	// If valid length, check that code is valid having no duplicate or strange characters
+		// If not, generate valid code
+		if (!codePattern.test(vm.cardCode)) {
+			// TODO: Show cardCode error message
+			console.log("pattern error");
 			return;
-    	}
-    	
-		// If valid length, check that code is valid having no duplicate or strange characters
-    	// If not, generate valid code
-    	if (!codePattern.test(vm.cardCode)) {
-    		// TODO: Show cardCode error message
-    		console.log("pattern error");
-    		return;
-    	};
-    	
-    	vm.shareCode = vm.cardCode;
-    	// If valid code insert middle slot in card
-    	vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
+		};
+		
+		vm.shareCode = vm.cardCode;
+		// If valid code insert middle slot in card
+		vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
 
-    	vm.isCodeValid = true;
+		vm.isCodeValid = true;
 
-    	return;
-    };
+		return;
+	};
 
-    var drawCard = function () {
-    	// Load the cards from JSON into card pool
-    	getCardPool.then(function (response) {
-    		console.log("SUCCESS SERVICE: " + vm.conference);
-    		vm.cardPool = response;
+	var drawCard = function () {
+		// Load the cards from JSON into card pool
+		getCardPool.then(function (response) {
+			console.log("SUCCESS SERVICE: " + vm.conference);
+			vm.cardPool = response;
 
-	    	// First, create the slots map
-	    	var cardMap = {}
-	    	for (var i = 0; i < vm.cardPool.length; i++) {
-	    		cardMap[vm.cardPool[i].id] = vm.cardPool[i];
-	    	};
+			// First, create the slots map
+			var cardMap = {}
+			for (var i = 0; i < vm.cardPool.length; i++) {
+				cardMap[vm.cardPool[i].id] = vm.cardPool[i];
+			};
 
-	    	// var code = 'zABCDEFGHIJKxLMNOPrstuvwy';
+			// var code = 'zABCDEFGHIJKxLMNOPrstuvwy';
 
-	    	var numberOfSlots = 25; // code.length;
-	    	var cardIndex = 0;
-	    	var rowIndex = 0;
-	    	while (cardIndex < numberOfSlots) {
-	    		var cardRow = new rowTemplate();
-	    		for (var i = 0; i < 5; i++) {
-	    			cardRow.slots[i] = cardMap[vm.cardCode[cardIndex]];
-		    		cardIndex += 1;
-	    		};
-	    		vm.card.rows[rowIndex] = cardRow;
-	    		rowIndex += 1;
-	    	}
-    	});
+			var cardIndex = 0;
 
-    	// cards.success(function (data) {
-    	// 	console.log("SUCCESS SERVICE: " + vm.conference);
-    	// 	vm.cardPool = data;
-
-	    // 	// First, create the slots map
-	    // 	var cardMap = {}
-	    // 	for (var i = 0; i < vm.cardPool.length; i++) {
-	    // 		cardMap[vm.cardPool[i].id] = vm.cardPool[i];
-	    // 	};
-
-	    // 	var code = 'abcdefghijkl';
-
-	    // 	var numberOfSlots = code.length; //25;
-	    // 	var cardIndex = 0;
-	    // 	var rowIndex = 0;
-	    // 	while (cardIndex < numberOfSlots) {
-	    // 		var cardRow = new rowTemplate();
-	    // 		for (var i = 0; i < 5; i++) {
-	    // 			cardRow.slots[i] = cardMap[code[cardIndex]];
-		   //  		cardIndex += 1;
-	    // 		};
-	    // 		vm.card.rows[rowIndex] = cardRow;
-	    // 		rowIndex += 1;
-	    // 	}
-    	// });
-
-    };
+			for (var i = 0; i < vm.cardCode.length; i++) {
+				vm.myCard.push(cardMap[vm.cardCode[cardIndex]]);
+				cardIndex += 1;
+			}
+		});
+	};
 
 	// TODO: This could be moved to a directive
 	var init = function () {
 		console.log("INIT BINGO CONTROLLER");
 		vm.cardPool = [];
-		vm.card = {
-    		"rows": []
-    	};
+		vm.myCard = [];
 
     	// Check that conference parameter is valid
     	if (validConferences.indexOf(vm.conference) == -1) {
     		// TODO: Show conference error message
     		console.log("conference error");
-			// vm.conference = validConferences[Math.floor(Math.random() * 3)];
+				// vm.conference = validConferences[Math.floor(Math.random() * 3)];
     		return;
     	}
     	else {
-			if ($routeParams.shared) {
-				vm.isSharedCode = $routeParams.shared;
-				vm.cardCode = $routeParams.cardCode;
-			}
+				if ($routeParams.shared) {
+					vm.isSharedCode = $routeParams.shared;
+					vm.cardCode = $routeParams.cardCode;
+				}
 
-			// if (vm.conference == '') {
-			// 	vm.conference = validConferences[Math.floor(Math.random() * 3)];
-			// }
-			// Handle missing route parameters
-			if (vm.cardCode) {
-				readCardCode();
-			}
-			else {
-				vm.generateCardCode();
-			};
+				// if (vm.conference == '') {
+				// 	vm.conference = validConferences[Math.floor(Math.random() * 3)];
+				// }
+				// Handle missing route parameters
+				if (vm.cardCode) {
+					readCardCode();
+				}
+				else {
+					vm.generateCardCode();
+				};
 
-			if (vm.isCodeValid) {
-				vm.cardLogoUrl = 'images/logo_' + vm.conference + '.png';
-				drawCard();
-			};
+				if (vm.isCodeValid) {
+					vm.cardLogoUrl = 'images/logo_' + vm.conference + '.png';
+					drawCard();
+				};
 
-			return;
+				return;
     	}
 	};
 
@@ -179,10 +147,6 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 	function strSplice(str, index, count, add) {
 		return str.slice(0, index) + (add || "") + str.slice(index + count);
 	};
-
-	function rowTemplate () {
-		this.slots = [];
-	}
 
 	init();
 }]);

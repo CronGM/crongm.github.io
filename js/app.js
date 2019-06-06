@@ -14,21 +14,20 @@ app.config(['$routeProvider', function ($routeProvider) {
 	.when('/bingo', {
 		controller: 'MainController',
 		controllerAs: 'vm',
-		// templateUrl: 'views/main.html'
-		templateUrl: 'views/got/main.html'
+		templateUrl: 'views/main.html'
 	})
 	.when('/bingo/:conference/', {
 		controller: 'BingoController',
 		controllerAs: 'vm',
-		templateUrl: 'views/got/bingo.html'
+		templateUrl: 'views/bingo.html'
 	})
-	// .when('/bingo/:conference/:cardCode/:shared', {
-	// 	controller: 'BingoController',
-	// 	controllerAs: 'vm',
-	// 	templateUrl: 'views/bingo.html'
-	// })
+	.when('/bingo/:conference/:cardCode/:shared', {
+		controller: 'BingoController',
+		controllerAs: 'vm',
+		templateUrl: 'views/bingo.html'
+	})
 	.when('/rules', {
-		templateUrl: 'views/got/rules.html'
+		templateUrl: 'views/rules.html'
 	})
 	.when('/about', {
 		templateUrl: 'views/about.html'
