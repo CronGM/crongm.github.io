@@ -131,6 +131,20 @@ main
 	height 100px
 	margin-bottom 0.1em
 
+	&.disabled
+		pointer-events none
+		background #dddddd
+		opacity .5
+		&:before
+			display block
+			content "coming soon"
+			color black
+			position absolute
+			text-align center
+			width 100%
+			left 0
+			font-size 2em
+
 .bingo-link img
     margin 0 auto
     max-height 40px
@@ -226,7 +240,7 @@ main
 
 	.navbar-brand
 		img
-			max-width 200px
+			max-width 160px
 			height auto
 
 // Fix 1px transparent border on Chrome. Still present above and below images

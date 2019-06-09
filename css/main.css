@@ -113,6 +113,21 @@ main ol {
   height: 100px;
   margin-bottom: 0.1em;
 }
+.bingo-link.disabled {
+  pointer-events: none;
+  background: #ddd;
+  opacity: 0.5;
+}
+.bingo-link.disabled:before {
+  display: block;
+  content: "coming soon";
+  color: #000;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  font-size: 2em;
+}
 .bingo-link img {
   margin: 0 auto;
   max-height: 40px;
@@ -201,7 +216,7 @@ main ol {
   }
 }
 .navbar-brand img {
-  max-width: 200px;
+  max-width: 160px;
   height: auto;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
