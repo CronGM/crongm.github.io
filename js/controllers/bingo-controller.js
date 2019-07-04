@@ -26,7 +26,7 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 
 	vm.generateCardCode = function () {
 		// var chars="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOP";
-		var chars="abcdefghijklmnopqrstuvwyz";
+		var chars = "abcdefghijklmnopqrstuvwyz";
 		var indexOut = 0;
 		vm.cardCode = '';
 
@@ -38,7 +38,7 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 
 		// Save to local storage
 		localStorageService.set(vm.conference, vm.cardCode);
-	vm.shareCode = vm.cardCode;
+		vm.shareCode = vm.cardCode;
 		vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
 
 		vm.isCodeValid = true;
@@ -47,7 +47,7 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 	};
 
 	var readCardCode = function () {
-	// Checks that no card is repeated
+		// Checks that no card is repeated
 		var codePattern = /^(?:([A-Za-z])(?!.*\1))*$/;
 
 		// If valid conference, check that code has exactly 24 characters
@@ -55,17 +55,17 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 		if (vm.cardCode.length != 24) {
 			// TODO: Show cardCode error message
 			console.log("length error");
-		return;
+			return;
 		}
-		
-	// If valid length, check that code is valid having no duplicate or strange characters
+
+		// If valid length, check that code is valid having no duplicate or strange characters
 		// If not, generate valid code
 		if (!codePattern.test(vm.cardCode)) {
 			// TODO: Show cardCode error message
 			console.log("pattern error");
 			return;
 		};
-		
+
 		vm.shareCode = vm.cardCode;
 		// If valid code insert middle slot in card
 		vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
@@ -104,46 +104,46 @@ app.controller('BingoController', ['$scope', '$routeParams', 'cards', 'localStor
 		vm.cardPool = [];
 		vm.myCard = [];
 
-    	// Check that conference parameter is valid
-    	if (validConferences.indexOf(vm.conference) == -1) {
-    		// TODO: Show conference error message
-    		console.log("conference error");
-				// vm.conference = validConferences[Math.floor(Math.random() * 3)];
-    		return;
-    	}
-    	else {
-				if ($routeParams.shared) {
-					vm.isSharedCode = $routeParams.shared;
-					vm.cardCode = $routeParams.cardCode;
-				}
+		// Check that conference parameter is valid
+		if (validConferences.indexOf(vm.conference) == -1) {
+			// TODO: Show conference error message
+			console.log("conference error");
+			// vm.conference = validConferences[Math.floor(Math.random() * 3)];
+			return;
+		}
+		else {
+			if ($routeParams.shared) {
+				vm.isSharedCode = $routeParams.shared;
+				vm.cardCode = $routeParams.cardCode;
+			}
 
-				// if (vm.conference == '') {
-				// 	vm.conference = validConferences[Math.floor(Math.random() * 3)];
-				// }
-				// Handle missing route parameters
-				if (vm.cardCode) {
-					readCardCode();
-				}
-				else {
-					vm.generateCardCode();
-				};
+			// if (vm.conference == '') {
+			// 	vm.conference = validConferences[Math.floor(Math.random() * 3)];
+			// }
+			// Handle missing route parameters
+			if (vm.cardCode) {
+				readCardCode();
+			}
+			else {
+				vm.generateCardCode();
+			};
 
-				if (vm.isCodeValid) {
-					vm.cardLogoUrl = 'images/logo_' + vm.conference + '.png';
-					drawCard();
-				};
+			if (vm.isCodeValid) {
+				vm.cardLogoUrl = 'images/logo_' + vm.conference + '.png';
+				drawCard();
+			};
 
-				return;
-    	}
+			return;
+		}
 	};
 
-    //--- HELPERS
+	//--- HELPERS
 
 	// vm.getNumber = function(num) {
-    //     return new Array(num);
-    // };
+	//     return new Array(num);
+	// };
 
-    // Emulates Splice on strings.
+	// Emulates Splice on strings.
 	function strSplice(str, index, count, add) {
 		return str.slice(0, index) + (add || "") + str.slice(index + count);
 	};

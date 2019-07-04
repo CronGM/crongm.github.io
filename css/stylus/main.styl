@@ -9,242 +9,243 @@ $playstation = #0661B2
 $got = gray
 
 body
-    > .container
-        padding-bottom 80px
+  > .container
+    padding-bottom 80px
 
 main
-    p
-    ol
-	    font-size 18px
+  p
+  ol
+    font-size 18px
 
 .navbar
-    border-radius 0
+  border-radius 0
 
-    a
-        cursor pointer
-
-.navbar-brand
-	padding-bottom 3px
-	padding-top 3px
+  a
+    cursor pointer
 
 .navbar-brand
-    img
-        height 100%
-        width auto
+  padding-bottom 3px
+  padding-top 3px
+
+.navbar-brand
+  img
+    height 100%
+    width auto
 
 .text-red
-	color #c0392b
+  color #c0392b
 
 #conference-title
 #first-title
-	margin-bottom 0
+  margin-bottom 0
 
 #conference-time
 #second-title
-	margin-top -5px
+  margin-top -5px
 
 #card
-    border 1px solid black
+  border 1px solid black
 
-    div[class^="col-"]
-        padding 0
-        width 20%
+  div[class^="col-"]
+    padding 0
+    width 20%
 
-    header
-        color white
-        margin 0
-        padding 0.5em
-        border solid 1px black
+  header
+    color white
+    margin 0
+    padding 0.5em
+    border solid 1px black
 
 #card-header-logo
-	height 30px
+  height 30px
 
 .card-row
-	border solid 1px black
+  border solid 1px black
 
 .slot
-	position relative
-	border-right solid 2px black
+  position relative
+  border-right solid 2px black
 
-	&last-child
-		border-right none
+  &last-child
+    border-right none
 
 .slot
-    p
-        background transparent
-        margin 0
-        padding 0.1em 0.3em
-        color white
-        border-top solid 2px black
-        text-align center
-        font-size 12px
-        line-height 1em
-        min-height 28px
+  p
+    background transparent
+    margin 0
+    padding 0.1em 0.3em
+    color white
+    border-top solid 2px black
+    text-align center
+    font-size 12px
+    line-height 1em
+    min-height 28px
 
 #share-area
-	margin 1em 0 2em
+  margin 1em 0 2em
 
 #share-link
-	cursor text
-	background white
+  cursor text
+  background white
 
 #create-card-area
-	margin-top 3em
+  margin-top 3em
 
 .footer
-	background-color #222
-	color #FFFFFF
-	padding-top 1em
+  background-color #222
+  color #FFFFFF
+  padding-top 1em
 
 .xbox
-    background $xbox
-    .grid-cell
-        &.checked
-            &:after
-                background $xbox
+  background $xbox
+  .grid-cell
+    &.checked
+      &:after
+        background $xbox
 
 .nintendo
-    background $nintendo
-    .grid-cell
-        &.checked
-            &:after
-                background $nintendo
+  background $nintendo
+  .grid-cell
+    &.checked
+      &:after
+        background $nintendo
 
 .got
-    background $got
-    .grid-cell
-        &.checked
-            &:after
-                background $got
+  background $got
+  .grid-cell
+    &.checked
+      &:after
+        background $got
 
 .playstation
-    background $playstation
-    .grid-cell
-        &.checked
-            &:after
-                background $playstation
+  background $playstation
+
+  .grid-cell
+    &.checked
+      &:after
+        background $playstation
 
 .bingo-link
-	display block
-	text-align center
-	padding 30px 20px
-	height 100px
-	margin-bottom 0.1em
+  display block
+  text-align center
+  padding 30px 20px
+  height 100px
+  margin-bottom 0.1em
 
-	&.disabled
-		pointer-events none
-		background #dddddd
-		opacity .5
-		&:before
-			display block
-			content "coming soon"
-			color black
-			position absolute
-			text-align center
-			width 100%
-			left 0
-			font-size 2em
+  &.disabled
+    pointer-events none
+    background #dddddd
+    opacity .5
+    &:before
+      display block
+      content "coming soon"
+      color black
+      position absolute
+      text-align center
+      width 100%
+      left 0
+      font-size 2em
 
 .bingo-link img
-    margin 0 auto
-    max-height 40px
+  margin 0 auto
+  max-height 40px
 
 
 .schedule-text
-	margin 0.1em 0 1em
+  margin 0.1em 0 1em
 
 .grid
-    display flex
-    flex-wrap wrap
-    width 100%
+  display flex
+  flex-wrap wrap
+  width 100%
 
 .grid-cell
-    cursor pointer
-    border 1px solid black
-    overflow hidden
-    position relative
-    text-overflow ellipsis
-    flex-basis 20%
-    
-    img
-        max-width 100%
-        border-bottom 2px solid black
+  cursor pointer
+  border 1px solid black
+  overflow hidden
+  position relative
+  text-overflow ellipsis
+  flex-basis 20%
 
-    div
-        padding 0.5em 0.5em
-        color white
-        text-align center
-        font-size 12px
-        line-height 1em
-        margin 0
+  img
+    max-width 100%
+    border-bottom 2px solid black
 
-    &.checked
-        &:before
-            background white
-            content ""
-            display block
-            opacity 0.75
-            position absolute
-            top 0
-            left 0
-            right 0
-            bottom 0
+  div
+    padding 0.5em 0.5em
+    color white
+    text-align center
+    font-size 12px
+    line-height 1em
+    margin 0
 
-        &:after
-            border-radius 50%
-            color white
-            content "\e800"
-            display block
-            font-family fontello
-            font-size 3em
-            font-weight 700
-            line-height 1.5
-            text-align center
-            transform translateX(-50%) translateY(-50%)
-            width 1.5em
-            position absolute
-            top 50%
-            left 50%
+  &.checked
+    &:before
+      background white
+      content ""
+      display block
+      opacity 0.75
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
 
-            .got &
-                background #c00
-                content "☠️"
-                font-weight 400
+    &:after
+      border-radius 50%
+      color white
+      content "\e800"
+      display block
+      font-family fontello
+      font-size 3em
+      font-weight 700
+      line-height 1.5
+      text-align center
+      transform translateX(-50%) translateY(-50%)
+      width 1.5em
+      position absolute
+      top 50%
+      left 50%
+
+      .got &
+        background #c00
+        content "☠️"
+        font-weight 400
 
 // Utility Classes
 .no-margin
-    margin 0
+  margin 0
 
 .text-smallest
-	font-size 12px
+  font-size 12px
 
 // Media Queries
-            
+
 @media $mobile_only
-    .slot
-        min-height 94px;
+  .slot
+    min-height 94px;
 
-    .slot p
-        font-size 9px
-        line-height 1.1em
-        min-height 25px
+  .slot p
+    font-size 9px
+    line-height 1.1em
+    min-height 25px
 
-    .grid-cell
-        div
-            font-size 9px
-            line-height 1.1em
+  .grid-cell
+    div
+      font-size 9px
+      line-height 1.1em
 
-        &.checked
-            &:after
-                font-size 2.5em
+    &.checked
+      &:after
+        font-size 2.5em
 
-	.navbar-brand
-		img
-			max-width 160px
-			height auto
+  .navbar-brand
+    img
+      max-width 160px
+      height auto
 
 // Fix 1px transparent border on Chrome. Still present above and below images
 @media screen and (-webkit-min-device-pixel-ratio:0)
-    html
-        margin-top: 0px
-        margin-left: 1px
+  html
+    margin-top: 0px
+    margin-left: 1px
