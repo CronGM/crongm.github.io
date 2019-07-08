@@ -85,25 +85,25 @@ main ol {
 .xbox {
   background: #107c10;
 }
-.xbox .grid-cell.checked:after {
+.xbox .card-cell.checked:after {
   background: #107c10;
 }
 .nintendo {
   background: #d01a19;
 }
-.nintendo .grid-cell.checked:after {
+.nintendo .card-cell.checked:after {
   background: #d01a19;
 }
 .got {
   background: #808080;
 }
-.got .grid-cell.checked:after {
+.got .card-cell.checked:after {
   background: #808080;
 }
 .playstation {
   background: #0661b2;
 }
-.playstation .grid-cell.checked:after {
+.playstation .card-cell.checked:after {
   background: #0661b2;
 }
 .bingo-link {
@@ -135,12 +135,12 @@ main ol {
 .schedule-text {
   margin: 0.1em 0 1em;
 }
-.grid {
+.card {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
-.grid-cell {
+.card-cell {
   cursor: pointer;
   border: 1px solid #000;
   overflow: hidden;
@@ -148,11 +148,11 @@ main ol {
   text-overflow: ellipsis;
   flex-basis: 20%;
 }
-.grid-cell img {
+.card-cell img {
   max-width: 100%;
   border-bottom: 2px solid #000;
 }
-.grid-cell div {
+.card-cell div {
   padding: 0.5em 0.5em;
   color: #fff;
   text-align: center;
@@ -160,7 +160,7 @@ main ol {
   line-height: 1em;
   margin: 0;
 }
-.grid-cell.checked:before {
+.card-cell.checked:before {
   background: #fff;
   content: "";
   display: block;
@@ -171,7 +171,7 @@ main ol {
   right: 0;
   bottom: 0;
 }
-.grid-cell.checked:after {
+.card-cell.checked:after {
   border-radius: 50%;
   color: #fff;
   content: "\e800";
@@ -187,7 +187,7 @@ main ol {
   top: 50%;
   left: 50%;
 }
-.got .grid-cell.checked:after {
+.got .card-cell.checked:after {
   background: #c00;
   content: "☠️";
   font-weight: 400;
@@ -207,11 +207,11 @@ main ol {
     line-height: 1.1em;
     min-height: 25px;
   }
-  .grid-cell div {
+  .card-cell div {
     font-size: 9px;
     line-height: 1.1em;
   }
-  .grid-cell.checked:after {
+  .card-cell.checked:after {
     font-size: 2.5em;
   }
   .navbar-brand img {

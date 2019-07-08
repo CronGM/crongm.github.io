@@ -26,13 +26,13 @@
 				<img id="card-header-logo" ng-src="{{ vm.cardLogoUrl }}">
 				<h1 class="sr-only">{{ vm.conference }}</h1>
 			</header>
-			
-			<div class="grid">
-				<card-cell class="grid-cell" ng-repeat="cell in vm.myCard">
+
+			<card class="card">
+				<card-cell class="card-cell" ng-repeat="cell in vm.myCard">
 					<img ng-src="images/{{ vm.conference }}/{{ cell.image }}.jpg">
 					<div>{{ cell.text }}</div>
 				</card-cell>
-			</div>
+			</card>
 		</div>
 		<div id="share-area" class="text-center" ng-if="!vm.isSharedCode">
 			<p><small>Comparte esta tabla con tus amigos</small></p>

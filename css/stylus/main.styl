@@ -98,21 +98,21 @@ main
 
 .xbox
   background $xbox
-  .grid-cell
+  .card-cell
     &.checked
       &:after
         background $xbox
 
 .nintendo
   background $nintendo
-  .grid-cell
+  .card-cell
     &.checked
       &:after
         background $nintendo
 
 .got
   background $got
-  .grid-cell
+  .card-cell
     &.checked
       &:after
         background $got
@@ -120,7 +120,7 @@ main
 .playstation
   background $playstation
 
-  .grid-cell
+  .card-cell
     &.checked
       &:after
         background $playstation
@@ -154,12 +154,12 @@ main
 .schedule-text
   margin 0.1em 0 1em
 
-.grid
+.card
   display flex
   flex-wrap wrap
   width 100%
 
-.grid-cell
+.card-cell
   cursor pointer
   border 1px solid black
   overflow hidden
@@ -230,7 +230,7 @@ main
     line-height 1.1em
     min-height 25px
 
-  .grid-cell
+  .card-cell
     div
       font-size 9px
       line-height 1.1em
