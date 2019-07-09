@@ -4,16 +4,16 @@ angular
 
 function cardCellDirective() {
   return {
+    require: '^bingoCard',
     restrict: 'E',
     scope: {
-      updateCell: '&updateCellState',
       index: '@cellIndex'
     },
-    link: function (scope, elem, attr) {
+    link: function (scope, elem, attr, cardCtrl) {
       elem.click(function () {
         elem.toggleClass('checked');
         scope.isMarked = scope.isMarked == true ? false : true;
-        scope.updateCell()(scope.index, scope.isMarked);
+        cardCtrl.updateCellState(scope.index, scope.isMarked);
       })
     }
   }

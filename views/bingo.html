@@ -26,12 +26,8 @@
 				<h1 class="sr-only">{{ vm.conference }}</h1>
 			</header>
 
-			<card class="card">
-				<card-cell class="card-cell" ng-repeat="cell in vm.myCard" cell-index="{{ $index }}" update-cell-state="vm.updateCellState">
-					<img ng-src="images/{{ vm.conference }}/{{ cell.image }}.jpg">
-					<div>{{ cell.text }}</div>
-				</card-cell>
-			</card>
+			<bingo-card class="card" card-code="{{ vm.cardCode }}" conference="{{ vm.conference }}">
+			</bingo-card>
 		</div>
 		<div id="share-area" class="text-center" ng-if="!vm.isSharedCode">
 			<p><small>Comparte esta tabla con tus amigos</small></p>
