@@ -1,12 +1,20 @@
-app.directive('cardCell', function () {
-    return {
-        restrict: 'E',
-        scope: {},
-        link: function (scope, element, attr) {
-            element.click(function () {
-                element.toggleClass('checked');
-                scope.isMarked = scope.isMarked == true ? false : true;
-            })
-        }
+angular
+  .module('BingoApp')
+  .directive('cardCell', cardCellDirective);
+
+function cardCellDirective() {
+  return {
+    restrict: 'E',
+    scope: {
+      updateCell: '&updateCellState',
+      index: '@cellIndex'
+    },
+    link: function (scope, elem, attr) {
+      elem.click(function () {
+        elem.toggleClass('checked');
+        scope.isMarked = scope.isMarked == true ? false : true;
+        scope.updateCell()(scope.index, scope.isMarked);
+      })
     }
-})
+  }
+}

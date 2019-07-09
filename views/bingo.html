@@ -1,10 +1,10 @@
 <div class="row">
 	<div class="col-xs-12">
 		<h1 id="conference-title" class="h2 text-capitalize">Conferencia {{ vm.conference }}</h1>
-		<p id="conference-time" class="h3"><small>{{ vm.schedules[vm.conference] }}</small></p>
+		<p id="conference-time" class="h3"><small>{{ main.schedules.xbox.date }} - {{ main.schedules.xbox.time }}</small></p>
 	</div>
 
-	<div ng-if="vm.debug">
+	<div ng-if="main.debug">
 		<p>Conference: {{ vm.conference }}</p>
 		<p>Card Code: {{ vm.cardCode }}</p>
 		<p>Is Code Valid? {{ vm.isCodeValid }}</p>
@@ -16,7 +16,6 @@
 		<button class="btn btn-default" ng-click="vm.generateCardCode()">GENERATE CARD</button>
 	</div>
 
-	<!-- TODO: Implement centered columns -->
 	<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" ng-if="vm.isCodeValid">
 		<p class="text-right" ng-if="!vm.isSharedCode">
 			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://{{ vm.urlHost }}/#/bingo/{{ vm.conference }}/{{ vm.shareCode }}/shared" data-text="Esta es mi tabla del Bingo del Milenio #E3. ¡Participa para ganar nada! #{{ vm.conference }}" data-lang="es" data-count="none" data-hashtags="DCCBingo">Twittear</a>
@@ -28,7 +27,7 @@
 			</header>
 
 			<card class="card">
-				<card-cell class="card-cell" ng-repeat="cell in vm.myCard">
+				<card-cell class="card-cell" ng-repeat="cell in vm.myCard" cell-index="{{ $index }}" update-cell-state="vm.updateCellState">
 					<img ng-src="images/{{ vm.conference }}/{{ cell.image }}.jpg">
 					<div>{{ cell.text }}</div>
 				</card-cell>
@@ -43,27 +42,36 @@
 
 <div id="create-card-area" class="row" ng-if="vm.isSharedCode">
 	<div class="col-xs-12">
-		<p class="h4">Crea tu propia tarjeta para participar</p>
+		<p class="h3">Crea tu propia tarjeta para participar</p>
 	</div>
 	<div class="col-xs-12 col-sm-4">
 		<a ng-href="#/bingo/xbox/" class="bingo-link xbox">
 			<img src="images/logo_xbox.png" class="img-responsive" alt="xbox">
 		</a>
-		<p class="text-center schedule-text small">Domingo 11 de Junio, 04:00 PM (MX)
+		<p class="h4 text-center schedule-text">
+			{{ main.schedules.xbox.date }}
+			<br/>
+			{{ main.schedules.xbox.time }}
 		</p>
 	</div>
 	<div class="col-xs-12 col-sm-4">
 		<a ng-href="#/bingo/playstation/" class="bingo-link playstation">
 			<img src="images/logo_playstation.png" class="img-responsive" alt="playstation">
 		</a>
-		<p class="text-center schedule-text small">Lunes 12 de Junio, 8:00 PM (MX)
+		<p class="h4 text-center schedule-text">
+			{{ main.schedules.playstation.date }}
+			<br/>
+			{{ main.schedules.playstation.time }}
 		</p>
 	</div>
 	<div class="col-xs-12 col-sm-4">
 		<a ng-href="#/bingo/nintendo/" class="bingo-link nintendo">
 			<img src="images/logo_nintendo.png" class="img-responsive" alt="nintendo">
 		</a>
-		<p class="text-center schedule-text small">Martes 13 de Junio, 11:00 AM (MX)
+		<p class="h4 text-center schedule-text">
+			{{ main.schedules.nintendo.date }}
+			<br/>
+			{{ main.schedules.nintendo.time }}
 		</p>
 	</div>
 </div>

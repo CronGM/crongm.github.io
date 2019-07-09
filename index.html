@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="css/fontello-embedded.css" />
 		<link rel="stylesheet" href="css/main.css">
 	</head>
-	<body ng-app="BingoApp" ng-controller="dataController as data">
+	<body ng-app="BingoApp" ng-controller="MainController as main">
 		<!--[if lt IE 7]>
 			<p class="browsehappy">Estás usando un navegador <strong>muy viejo</strong>. Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> para que seas más feliz. </p>
 		<![endif]-->
@@ -46,10 +46,10 @@
 		</header>
 
 		<main class="container">
-			<div class="row" ng-if="!data.hideTermsAlert">
+			<div class="row" ng-if="!main.hideTermsAlert">
 				<div class="col-xs-12">
 					<div class="alert alert-danger alert-dismissible" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar" ng-click="data.dismissTermsAlert()"><span aria-hidden="true">&times;</span></button>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar" ng-click="main.dismissTermsAlert()"><span aria-hidden="true">&times;</span></button>
 						<strong>AVISO DE PRIVACIDAD:</strong> Al generar tus tarjeta de bingo se almacenan datos en tu navegador. Estos datos se limitan a la creación de tus tarjetas para el bingo, y no son compartidos ni utilizados fuera de la app. Puedes borrar estos datos cuando lo desees desde la barra de navegación. Al continuar utilizando la app estás aceptando estas condiciones.
 					</div>
 				</div>
@@ -84,7 +84,7 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-						<button type="button" class="btn btn-primary btn-danger" ng-click="data.deleteAllData()" data-dismiss="modal">Eliminar datos</button>
+						<button type="button" class="btn btn-primary btn-danger" ng-click="main.deleteAllData()" data-dismiss="modal">Eliminar datos</button>
 					</div>
 				</div>
 			</div>
@@ -111,14 +111,12 @@
 
 		<!-- Modules -->
 		<script src="js/app.js"></script>
-		<script src="js/controllers/data-controller.js"></script>
 		<script src="js/directives/card.js"></script>
 		<script src="js/directives/card-cell.js"></script>
 
 		<!-- Controllers -->
 		<script src="js/controllers/main-controller.js"></script>
 		<script src="js/controllers/bingo-controller.js"></script>
-		<script src="js/controllers/about-controller.js"></script>
 		<script src="js/controllers/topnav-controller.js"></script>
 
 		<!-- Services -->

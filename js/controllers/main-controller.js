@@ -1,26 +1,40 @@
 'use strict';
 
-app.controller('MainController', ['$scope', '$routeParams', 'localStorageService', function ($scope, $routeParams, localStorageService) {
-	var vm = this;
+angular
+	.module('BingoApp')
+  .controller('MainController', MainController);
 
-	// Enable debug UI
-	vm.debug = true;
+MainController.$inject = ['$scope', '$routeParams', 'localStorageService', '$window',];
+function MainController($scope, $routeParams, localStorageService, $window) {
+  var vm = this;
 
-	vm.hideTermsAlert = localStorageService.get('hideTerms') || false;
+  // Enable debug UI
+  vm.debug = false;
 
-	vm.init = function () {
-        // load links from local storage here
-        var localNintendoCard = localStorageService.get('nintendo');
-        var localPlaystationCard = localStorageService.get('playstation');
-        var localXboxCard = localStorageService.get('xbox');
-        var localGotCard = localStorageService.get('got');
+  // TODO: Implement easy modification/localization
+  vm.schedules = {
+    "nintendo": {
+      date: '2021 (MX)',
+      time: 'Pending'
+    },
+    "playstation": {
+      date: '2021 (MX)',
+      time: 'Pending'
+    },
+    "xbox": {
+      date: '2021 (MX)',
+      time: 'Pending'
+    }
+  };
 
-        vm.nintendoCardCode = localNintendoCard || '';
-        vm.playstationCardCode = localPlaystationCard || '';
-        vm.xboxCardCode = localXboxCard || '';
-        vm.gotCardCode = localGotCard || '';
-		return;
-	};
+  vm.hideTermsAlert = localStorageService.get('hideTerms') || false;
 
-	vm.init();
-}]);
+  vm.dismissTermsAlert = function () {
+    localStorageService.set('hideTerms', true);
+  }
+
+  vm.deleteAllData = function () {
+    localStorageService.clearAll();
+    $window.location.assign('/');
+  }
+}

@@ -13,26 +13,31 @@
 		<a ng-href="#/bingo/xbox/" class="bingo-link xbox">
 			<img src="images/logo_xbox.png" class="img-responsive" alt="xbox">
 		</a>
-		<p class="h3 text-center schedule-text">Domingo 9 de Junio
+		<p class="h3 text-center schedule-text">
+			{{ main.schedules.xbox.date }}
 			<br/>
-			03:00 PM (MX)
+			{{ main.schedules.xbox.time }}
 		</p>
 	</div>
 	<div class="col-xs-12 col-sm-4">
 		<a ng-href="#/bingo/nintendo/" class="bingo-link nintendo disabled">
 			<img src="images/logo_nintendo.png" class="img-responsive" alt="nintendo">
 		</a>
-		<p class="h3 text-center schedule-text">Martes 11 de Junio
-			<br/>
-			11:00 AM (MX)
-		</p>
+		<p class="h3 text-center schedule-text">
+				{{ main.schedules.nintendo.date }}
+				<br/>
+				{{ main.schedules.nintendo.time }}
+			</p>
 	</div>
 	<div class="col-xs-12 col-sm-4">
 		<a ng-href="#/bingo/playstation/" class="bingo-link playstation disabled">
 			<img src="images/logo_playstation.png" class="img-responsive" alt="playstation">
 		</a>
-		<p class="h3 text-center schedule-text">PENDIENTE
-		</p>
+		<p class="h3 text-center schedule-text">
+				{{ main.schedules.playstation.date }}
+				<br/>
+				{{ main.schedules.playstation.time }}
+			</p>
 	</div>
 </div>
 

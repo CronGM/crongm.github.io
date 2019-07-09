@@ -1,4 +1,9 @@
-app.controller('TopNavController', ['$scope', '$location', function ($scope, $location) {
+angular
+	.module('BingoApp')
+	.controller('TopNavController', TopNavController)
+
+TopNavController.$inject = ['$scope', '$location', ];
+function TopNavController ($scope, $location) {
 	vm = this;
 
 	vm.isActive = function (viewLocation) {
@@ -6,4 +11,4 @@ app.controller('TopNavController', ['$scope', '$location', function ($scope, $lo
 		// return $location.path().indexOf(viewLocation) == 0;
 		return viewLocation === $location.path();
 	};
-}])
+}
