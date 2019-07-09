@@ -14,29 +14,9 @@ function BingoController ($scope, $routeParams, cardsService, localStorageServic
 	vm.cardCode = localStorageService.get(vm.conference) || '';
 	vm.isCodeValid = false;
 	vm.urlHost = $location.host();
-	vm.cardState = localStorageService.get('card') || 0;
+
 
 	vm.cardPool = [];
-
-	vm.generateCardCode = function () {
-		// var chars="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOP";
-		var chars = "abcdefghijklmnopqrstuvwyz";
-		var indexOut = 0;
-		vm.cardCode = '';
-
-		for (var i = 0; i < 24; i++) {
-			indexOut = Math.floor(Math.random() * chars.length);
-			vm.cardCode += chars[indexOut];
-			chars = strSplice(chars, indexOut, 1);
-		};
-
-		// Save to local storage
-		localStorageService.set(vm.conference, vm.cardCode);
-		vm.shareCode = vm.cardCode;
-		vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
-
-		vm.isCodeValid = true;
-	};
 
 	vm.updateCellState = function(index, value) {
 		// vm.cardState += index to bit power (could be negative to substract);
@@ -44,31 +24,46 @@ function BingoController ($scope, $routeParams, cardsService, localStorageServic
 		console.log('tarjeta', vm.cardState);
 	}
 
-	var readCardCode = function () {
+	function generateCardCode () {
+		// Add more characters according to your JSON pool
+		// var chars="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOP";
+		var chars = "abcdefghijklmnopqrstuvwyz";
+		var indexOut = 0;
+		var cardCode = '';
+
+		for (var i = 0; i < 24; i++) {
+			indexOut = Math.floor(Math.random() * chars.length);
+			cardCode += chars[indexOut];
+			chars = strSplice(chars, indexOut, 1);
+		};
+
+		// Save to local storage
+		localStorageService.set(vm.conference, cardCode);
+
+		return cardCode
+	};
+
+	function validateCardCode() {
 		var codePattern = /^(?:([A-Za-z])(?!.*\1))*$/;
 
 		// Check that cardCode has exactly 24 characters. 25th character (free cell) is inserted later.
 		if (vm.cardCode.length != 24) {
 			// TODO: Show cardCode error message
 			console.error("Invalid card code");
-			return;
+			return false;
 		}
 
 		// Check that no cell is repeated
 		if (!codePattern.test(vm.cardCode)) {
 			// TODO: Show cardCode error message
 			console.error("Invalid card pattern");
-			return;
+			return false;
 		};
 
-		vm.shareCode = vm.cardCode;
-		// If cardCode is valid insert free cell
-		// TODO: Make free cell general for all cards and out of JSON
-		vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
-		vm.isCodeValid = true;
+		return true;
 	};
 
-	var drawCard = function () {
+	function drawCard () {
 		// Load the cards from JSON into card pool
 		getCardPool.then(function (data) {
 			vm.cardPool = data;
@@ -89,8 +84,7 @@ function BingoController ($scope, $routeParams, cardsService, localStorageServic
 	};
 
 	// TODO: This could be moved to a directive
-	var init = function () {
-		console.log("INIT BINGO CONTROLLER");
+	function init() {
 		vm.cardPool = [];
 		vm.myCard = [];
 
@@ -106,24 +100,23 @@ function BingoController ($scope, $routeParams, cardsService, localStorageServic
 		}
 
 		// Handle missing route parameters
-		if (vm.cardCode) {
-			readCardCode();
+		if (!vm.cardCode) {
+			vm.cardCode = generateCardCode();
 		}
-		else {
-			vm.generateCardCode();
-		};
+
+		vm.isCodeValid = validateCardCode();
 
 		if (vm.isCodeValid) {
+			vm.shareCode = vm.cardCode;
+			// Insert free cell only after share code is set.
+			// TODO: Make free cell general for all cards and out of JSON
+			vm.cardCode = strSplice(vm.cardCode, 12, 0, 'x');
 			vm.cardLogoUrl = 'images/logo_' + vm.conference + '.png';
 			drawCard();
 		};
 	};
 
 	//--- HELPERS
-
-	// vm.getNumber = function(num) {
-	//     return new Array(num);
-	// };
 
 	// Emulates Splice on strings.
 	function strSplice(str, index, count, add) {
