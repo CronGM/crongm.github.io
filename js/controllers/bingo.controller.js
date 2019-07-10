@@ -8,9 +8,10 @@ BingoController.$inject = ['$scope', '$routeParams', 'localStorageService', '$lo
 function BingoController ($scope, $routeParams, localStorageService, $location) {
 	var vm = this;
 	var validConferences = ['nintendo', 'playstation', 'xbox', 'got'];
-	var cardCode = localStorageService.get(vm.conference) || '';
+	var conference = $routeParams.conference || '';
+	var cardCode = localStorageService.get(conference) || '';
 
-	vm.conference = $routeParams.conference || '';
+	vm.conference = conference;
 	vm.isCodeValid = false;
 	vm.urlHost = $location.host();
 
@@ -29,7 +30,6 @@ function BingoController ($scope, $routeParams, localStorageService, $location) 
 			chars = strSplice(chars, indexOut, 1);
 		};
 
-		// Save to local storage
 		localStorageService.set(vm.conference, cardCode);
 
 		return cardCode
