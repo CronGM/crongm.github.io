@@ -18,12 +18,13 @@ cardController.$inject = ['$scope', '$routeParams', 'cardsService', 'localStorag
 function cardController ($scope, $routeParams, cardsService, localStorageService) {
   var vm = this;
   var getCardPool = cardsService.getPool($routeParams);
-  var cardStateValue = localStorageService.get('card') || 0;
   var winningStateValues = new Array(31, 992, 27648, 1015808, 1082401, 2164802, 32505856, 4325508, 8659208, 1114384, 17039425, 17318416);
+
+  var cardStateValue = localStorageService.get(`${$scope.conference}.saved`) || 0;
 
   vm.cardPool = [];
   vm.updateCardTotalValue = updateCardTotalValue;
-  // vm.isCellMarked = isCellMarked;
+  vm.isCellMarked = isCellMarked;
 
   $scope.myCard = [];
 
@@ -57,18 +58,19 @@ function cardController ($scope, $routeParams, cardsService, localStorageService
       cardStateValue = cardStateValue & (~Math.pow(2, index));
     }
 
+    // Uncomment to save state on update
+    localStorageService.set(`${$scope.conference}.saved`, cardStateValue);
     checkWinner();
   }
 
-  // function isCellMarked(index) {
-  //   console.log('esta marcada esta?', index);
-  // }
+  function isCellMarked(index) {
+    return (cardStateValue & Math.pow(2, index)) ? true : false;
+  }
 
   function checkWinner() {
     var winningStateIndex = -1;
     // check the card's value against each of the winning values (with bit operation)
     for (var i = 0, n = winningStateValues.length; i < n; i++) {
-      console.log('win?', (cardStateValue & winningStateValues[i]), winningStateValues[i]);
       if ((cardStateValue & winningStateValues[i]) == winningStateValues[i]) {
         winningStateIndex = i;
         break;
@@ -79,9 +81,5 @@ function cardController ($scope, $routeParams, cardsService, localStorageService
       // TODO: Implement real winning screen
       console.info('A WINNER IS YOU');
     }
-  }
-
-  function loadCardState() {
-    // check value of cells bit for bit, and label them as marked when value is true
   }
 }

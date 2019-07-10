@@ -7,17 +7,22 @@ function cardCellDirective() {
     require: '^bingoCard',
     restrict: 'E',
     scope: true,
-    controller: function($scope) {
-      $scope.toggleChecked = function() {
-        if ($scope.$index === 12) return;
-
-        $scope.isMarked = !$scope.isMarked;
-        $scope.cardCtrl.updateCardTotalValue($scope.$index, $scope.isMarked);
-      };
-    },
-    link: function (scope, elem, attr, cardCtrl) {
-      scope.cardCtrl = cardCtrl;
-      // scope.isMarked = cardCtrl.isCellMarked(scope.$index);
-    }
+    controller: cardCellController,
+    link: cardCellLink
   }
+}
+
+cardCellController.$inject = ['$scope'];
+function cardCellController ($scope) {
+  $scope.toggleChecked = function () {
+    if ($scope.$index === 12) return;
+
+    $scope.isMarked = !$scope.isMarked;
+    $scope.cardCtrl.updateCardTotalValue($scope.$index, $scope.isMarked);
+  };
+}
+
+function cardCellLink (scope, elem, attr, cardCtrl) {
+  scope.cardCtrl = cardCtrl;
+  scope.isMarked = cardCtrl.isCellMarked(scope.$index);
 }
