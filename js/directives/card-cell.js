@@ -6,15 +6,18 @@ function cardCellDirective() {
   return {
     require: '^bingoCard',
     restrict: 'E',
-    scope: {
-      index: '@cellIndex'
+    scope: true,
+    controller: function($scope) {
+      $scope.toggleChecked = function() {
+        if ($scope.$index === 12) return;
+
+        $scope.isMarked = !$scope.isMarked;
+        $scope.cardCtrl.updateCardTotalValue($scope.$index, $scope.isMarked);
+      };
     },
     link: function (scope, elem, attr, cardCtrl) {
-      elem.click(function () {
-        elem.toggleClass('checked');
-        scope.isMarked = scope.isMarked == true ? false : true;
-        cardCtrl.updateCellState(scope.index, scope.isMarked);
-      })
+      scope.cardCtrl = cardCtrl;
+      // scope.isMarked = cardCtrl.isCellMarked(scope.$index);
     }
   }
 }

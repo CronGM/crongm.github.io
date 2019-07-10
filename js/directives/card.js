@@ -18,17 +18,14 @@ cardController.$inject = ['$scope', '$routeParams', 'cardsService', 'localStorag
 function cardController ($scope, $routeParams, cardsService, localStorageService) {
   var vm = this;
   var getCardPool = cardsService.getPool($routeParams);
-  var cardState = localStorageService.get('card') || 0;
+  var cardStateValue = localStorageService.get('card') || 0;
+  var winningStateValues = new Array(31, 992, 27648, 1015808, 1082401, 2164802, 32505856, 4325508, 8659208, 1114384, 17039425, 17318416);
 
   vm.cardPool = [];
+  vm.updateCardTotalValue = updateCardTotalValue;
+  // vm.isCellMarked = isCellMarked;
 
   $scope.myCard = [];
-
-  vm.updateCellState = function(index, value) {
-    // cardState += index to bit power (could be negative to substract);
-    console.log('guardando:', index, value);
-    console.log('tarjeta', cardState);
-  }
 
   drawCard();
 
@@ -50,4 +47,41 @@ function cardController ($scope, $routeParams, cardsService, localStorageService
       }
     });
   };
+
+  function updateCardTotalValue(index, checked) {
+
+    // Add bit to value if cell is marked. Else, substract bit from total value.
+    if (checked) {
+      cardStateValue = cardStateValue | Math.pow(2, index);
+    } else {
+      cardStateValue = cardStateValue & (~Math.pow(2, index));
+    }
+
+    checkWinner();
+  }
+
+  // function isCellMarked(index) {
+  //   console.log('esta marcada esta?', index);
+  // }
+
+  function checkWinner() {
+    var winningStateIndex = -1;
+    // check the card's value against each of the winning values (with bit operation)
+    for (var i = 0, n = winningStateValues.length; i < n; i++) {
+      console.log('win?', (cardStateValue & winningStateValues[i]), winningStateValues[i]);
+      if ((cardStateValue & winningStateValues[i]) == winningStateValues[i]) {
+        winningStateIndex = i;
+        break;
+      }
+    }
+
+    if (winningStateIndex > -1) {
+      // TODO: Implement real winning screen
+      console.info('A WINNER IS YOU');
+    }
+  }
+
+  function loadCardState() {
+    // check value of cells bit for bit, and label them as marked when value is true
+  }
 }
