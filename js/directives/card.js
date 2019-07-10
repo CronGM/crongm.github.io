@@ -14,13 +14,13 @@ function bingoCardDirective () {
   }
 }
 
-cardController.$inject = ['$scope', '$routeParams', 'cardsService', 'localStorageService']
-function cardController ($scope, $routeParams, cardsService, localStorageService) {
+cardController.$inject = ['$scope', 'flagSaveState', '$routeParams', 'cardsService', 'localStorageService']
+function cardController($scope, flagSaveState, $routeParams, cardsService, localStorageService) {
   var vm = this;
   var getCardPool = cardsService.getPool($routeParams);
   var winningStateValues = new Array(31, 992, 27648, 1015808, 1082401, 2164802, 32505856, 4325508, 8659208, 1114384, 17039425, 17318416);
 
-  var cardStateValue = localStorageService.get(`${$scope.conference}.saved`) || 0;
+  var cardStateValue = (flagSaveState && localStorageService.get(`${$scope.conference}.saved`)) || 0;
 
   vm.cardPool = [];
   vm.updateCardTotalValue = updateCardTotalValue;
@@ -58,8 +58,10 @@ function cardController ($scope, $routeParams, cardsService, localStorageService
       cardStateValue = cardStateValue & (~Math.pow(2, index));
     }
 
-    // Uncomment to save state on update
-    localStorageService.set(`${$scope.conference}.saved`, cardStateValue);
+    if (flagSaveState) {
+      localStorageService.set(`${$scope.conference}.saved`, cardStateValue);
+    }
+
     checkWinner();
   }
 

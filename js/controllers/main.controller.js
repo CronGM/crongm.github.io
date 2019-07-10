@@ -4,12 +4,12 @@ angular
 	.module('BingoApp')
   .controller('MainController', MainController);
 
-MainController.$inject = ['$scope', '$routeParams', 'localStorageService', '$window',];
-function MainController($scope, $routeParams, localStorageService, $window) {
+MainController.$inject = ['$scope', 'flagDebugMode', 'localStorageService', '$window',];
+function MainController($scope, flagDebugMode, localStorageService, $window) {
   var vm = this;
 
   // Enable debug UI
-  vm.debug = false;
+  vm.debug = flagDebugMode;
 
   // TODO: Implement easy modification/localization
   vm.schedules = {

@@ -5,6 +5,8 @@ angular
     'ngRoute',
     'LocalStorageModule'
   ])
+  .constant('flagDebugMode', false)
+  .constant('flagSaveState', false)
   .config(['localStorageServiceProvider', function (localStorageServiceProvider) {
     localStorageServiceProvider.setPrefix('dcbingo');
   }])
@@ -33,3 +35,5 @@ angular
         redirectTo: '/bingo'
       });
   }]);
+
+  // TODO: Create feature flag service
